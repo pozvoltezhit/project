@@ -1,0 +1,7 @@
+services:
+  backend:
+    environment:
+      QDRANT_URL: http://qdrant:6333
+      NEO4J_URL: bolt://neo4j:7687
+      NEO4J_PASSWORD_FILE: /app/data/neo4j-password.txt
+    depends_on: [qdrant, neo4j]

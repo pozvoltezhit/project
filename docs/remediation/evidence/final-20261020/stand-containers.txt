@@ -1,0 +1,8 @@
+course-final-20261020-backend-1|exited|course-knowledge-final:20261020
+course-final-20261020-vllm-1|exited|vllm/vllm-openai:v0.10.2
+course-final-20261020-gateway-1|exited|nginx:1.28-alpine
+course-final-20261020-jaeger-1|exited|jaegertracing/all-in-one:1.76.0
+course-final-20261020-prometheus-1|exited|prom/prometheus:v3.5.0
+course-final-20261020-grafana-1|exited|grafana/grafana:12.1.1
+course-final-20261020-qdrant-1|exited|qdrant/qdrant:v1.19.1
+course-final-20261020-neo4j-1|exited|neo4j:5.26-community

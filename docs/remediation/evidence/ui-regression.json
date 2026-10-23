@@ -1,0 +1,10 @@
+{
+  "decision": "PASS",
+  "synthetic_test_identity": true,
+  "multi_hop": "answered/vllm with both authorized sources and graph",
+  "restricted_document": "no_evidence; no quotes/graph",
+  "screenshots": [
+    "ui-b-final.png",
+    "ui-b-denied-final.png"
+  ]
+}

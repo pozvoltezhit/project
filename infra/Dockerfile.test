@@ -1,0 +1,6 @@
+ARG BASE_IMAGE=course-knowledge-audit:20261020
+FROM ${BASE_IMAGE}
+USER root
+COPY requirements-dev.txt /tmp/requirements-dev.txt
+RUN pip install --no-cache-dir -r /tmp/requirements-dev.txt
+USER app

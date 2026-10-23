@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "removed_namespace": "course-remediation-20261020",
+  "test_containers": 8,
+  "new_test_volumes": [
+    "course-remediation-20261020_neo4j",
+    "course-remediation-20261020_qdrant"
+  ],
+  "remaining_test_containers": [],
+  "portal_qdrant": {
+    "same_container": true,
+    "same_started_at": true,
+    "running": false,
+    "health": "unhealthy"
+  },
+  "original_assets": "No command targets original data, model weights, credentials, indices or other compose projects; tested image retained"
+}

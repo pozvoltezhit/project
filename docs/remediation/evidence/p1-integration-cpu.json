@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-20T08:07:02.322896+00:00",
+  "checks": "PASS: HTTP RBAC/tenant/session/injection, scanned PDF OCR, Qdrant ACL, Neo4j mirror, Jaeger spans, Prometheus, blocked backend egress",
+  "generation_mode": "extractive",
+  "neo4j_nodes": 10,
+  "neo4j_edges": 3,
+  "trace_operations": [
+    "GET /graph",
+    "POST /query",
+    "agent.expand",
+    "agent.guard",
+    "agent.plan",
+    "agent.rerank",
+    "agent.retrieve",
+    "fastapi.dependencies",
+    "fastapi.endpoint",
+    "fastapi.serialization",
+    "query",
+    "query.finalize"
+  ],
+  "user_b_evidence": [
+    {
+      "chunk_id": "383c400fd8d9dbb157c6ebef",
+      "quote": "Синтетический учебный документ. Реальные производственные данные не использованы.\nНасос Н-17 подключен к контуру К-2. Рабочее давление насоса Н-17 не должно превышать 6 бар.\nОтключение насоса Н-17 перед техническим обслуживанием обязательно.",
+      "title": "01-equipment.txt",
+      "page": 1,
+      "version": 2
+    },
+    {
+      "chunk_id": "fca53e0f41ac9e1d9893e65a",
+      "quote": "Синтетический учебный документ. Реальные производственные данные не использованы.\nКонтур К-2 контролируется датчиком Д-8. Датчик Д-8 подаёт сигнал при температуре выше 80 градусов.\nДатчик Д-8 проверяют перед запуском контура К-2.",
+      "title": "02-control.txt",
+      "page": 1,
+      "version": 2
+    }
+  ],
+  "ocr_text": "Учебный технический регламент\n\nНасос Н-17 подключен к контуру К-2.\nКонтур К-2 контролируется датчиком Д-8.\nРежим: 100 оборотов в минуту.\n\nСинтетический документ для проверки ОСК.\n"
+}

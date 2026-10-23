@@ -1,0 +1,616 @@
+{
+  "version": "llm-quality-validation-v2",
+  "synthetic": true,
+  "frozen_before_prompt_tuning": true,
+  "timestamp": 1792504962.355903,
+  "seed": 3351805604117239893,
+  "annotation": "Author-generated, not independent domain expert labels",
+  "ocr_limitation": "New query reuses the existing synthetic image-only OCR source; text cases are newly generated",
+  "cases": [
+    {
+      "id": "factual-0",
+      "query": "Укажи порог отключения Т-578.",
+      "documents": [
+        {
+          "id": "factual-0-0",
+          "text": "Узел Т-578 отключают при достижении 135 °C.",
+          "tenant": "factory",
+          "roles": [
+            "staff"
+          ]
+        }
+      ],
+      "expected_behavior": "answered",
+      "expected_sources": [
+        "factual-0-0"
+      ],
+      "expected_facts": [
+        "135 °C"
+      ],
+      "category": "factual_units",
+      "tenant": "factory",
+      "roles": [
+        "staff"
+      ]
+    },
+    {
+      "id": "factual-1",
+      "query": "Укажи порог отключения Т-606.",
+      "documents": [
+        {
+          "id": "factual-1-0",
+          "text": "Узел Т-606 отключают при достижении 101 °C.",
+          "tenant": "factory",
+          "roles": [
+            "staff"
+          ]
+        }
+      ],
+      "expected_behavior": "answered",
+      "expected_sources": [
+        "factual-1-0"
+      ],
+      "expected_facts": [
+        "101 °C"
+      ],
+      "category": "factual_units",
+      "tenant": "factory",
+      "roles": [
+        "staff"
+      ]
+    },
+    {
+      "id": "pressure",
+      "query": "Каково допустимое давление насоса Н-356?",
+      "documents": [
+        {
+          "id": "pressure-0",
+          "text": "Давление насоса Н-356 не должно превышать 7 бар.",
+          "tenant": "factory",
+          "roles": [
+            "staff"
+          ]
+        }
+      ],
+      "expected_behavior": "answered",
+      "expected_sources": [
+        "pressure-0"
+      ],
+      "expected_facts": [
+        "не должно превышать 7 бар"
+      ],
+      "category": "numbers",
+      "tenant": "factory",
+      "roles": [
+        "staff"
+      ]
+    },
+    {
+      "id": "negation",
+      "query": "Разрешена ли работа П-485?",
+      "documents": [
+        {
+          "id": "negation-0",
+          "text": "Работа агрегата П-485 не разрешена.",
+          "tenant": "factory",
+          "roles": [
+            "staff"
+          ]
+        }
+      ],
+      "expected_behavior": "answered",
+      "expected_sources": [
+        "negation-0"
+      ],
+      "expected_facts": [
+        "не разрешена"
+      ],
+      "category": "negation",
+      "tenant": "factory",
+      "roles": [
+        "staff"
+      ]
+    },
+    {
+      "id": "condition",
+      "query": "Когда допускается запуск А-733?",
+      "documents": [
+        {
+          "id": "condition-0",
+          "text": "Запуск узла А-733 допускается только при исправном датчике Д-642. При отказе датчика запуск запрещён.",
+          "tenant": "factory",
+          "roles": [
+            "staff"
+          ]
+        }
+      ],
+      "expected_behavior": "answered",
+      "expected_sources": [
+        "condition-0"
+      ],
+      "expected_facts": [
+        "только при исправном датчике Д-642",
+        "запуск запрещён"
+      ],
+      "category": "condition",
+      "tenant": "factory",
+      "roles": [
+        "staff"
+      ]
+    },
+    {
+      "id": "exception",
+      "query": "Опиши порядок обслуживания К-457 и исключение из него.",
+      "documents": [
+        {
+          "id": "exception-0",
+          "text": "Клапан К-457 закрывают перед обслуживанием. Исключение: продувка разрешается после согласования с диспетчером.",
+          "tenant": "factory",
+          "roles": [
+            "staff"
+          ]
+        }
+      ],
+      "expected_behavior": "answered",
+      "expected_sources": [
+        "exception-0"
+      ],
+      "expected_facts": [
+        "закрывают перед обслуживанием",
+        "после согласования с диспетчером"
+      ],
+      "category": "exception",
+      "tenant": "factory",
+      "roles": [
+        "staff"
+      ]
+    },
+    {
+      "id": "bridge-0",
+      "query": "Через какой контур Н-3573 связан с Д-3823?",
+      "documents": [
+        {
+          "id": "bridge-0-0",
+          "text": "Насос Н-3573 подключён к контуру К-7911.",
+          "tenant": "factory",
+          "roles": [
+            "staff"
+          ]
+        },
+        {
+          "id": "bridge-0-1",
+          "text": "Контур К-7911 контролируется датчиком Д-3823.",
+          "tenant": "factory",
+          "roles": [
+            "staff"
+          ]
+        }
+      ],
+      "expected_behavior": "answered",
+      "expected_sources": [
+        "bridge-0-0",
+        "bridge-0-1"
+      ],
+      "expected_facts": [
+        "Н-3573 подключён к контуру К-7911",
+        "К-7911 контролируется датчиком Д-3823"
+      ],
+      "category": "multi_hop",
+      "tenant": "factory",
+      "roles": [
+        "staff"
+      ]
+    },
+    {
+      "id": "bridge-1",
+      "query": "Через какой контур Н-4222 связан с Д-3514?",
+      "documents": [
+        {
+          "id": "bridge-1-0",
+          "text": "Насос Н-4222 подключён к контуру К-7935.",
+          "tenant": "factory",
+          "roles": [
+            "staff"
+          ]
+        },
+        {
+          "id": "bridge-1-1",
+          "text": "Контур К-7935 контролируется датчиком Д-3514.",
+          "tenant": "factory",
+          "roles": [
+            "staff"
+          ]
+        }
+      ],
+      "expected_behavior": "answered",
+      "expected_sources": [
+        "bridge-1-0",
+        "bridge-1-1"
+      ],
+      "expected_facts": [
+        "Н-4222 подключён к контуру К-7935",
+        "К-7935 контролируется датчиком Д-3514"
+      ],
+      "category": "multi_hop",
+      "tenant": "factory",
+      "roles": [
+        "staff"
+      ]
+    },
+    {
+      "id": "two-sources",
+      "query": "Приведи правила для узла У-431 из обеих инструкций.",
+      "documents": [
+        {
+          "id": "two-sources-0",
+          "text": "Узел У-431 отключается при 157 °C.",
+          "tenant": "factory",
+          "roles": [
+            "staff"
+          ]
+        },
+        {
+          "id": "two-sources-1",
+          "text": "Перед ремонтом узла У-431 питание отключают.",
+          "tenant": "factory",
+          "roles": [
+            "staff"
+          ]
+        }
+      ],
+      "expected_behavior": "answered",
+      "expected_sources": [
+        "two-sources-0",
+        "two-sources-1"
+      ],
+      "expected_facts": [
+        "157 °C",
+        "питание отключают"
+      ],
+      "category": "multiple_sources",
+      "tenant": "factory",
+      "roles": [
+        "staff"
+      ]
+    },
+    {
+      "id": "abbreviation",
+      "query": "Что требует п. 3.2 для Н-725?",
+      "documents": [
+        {
+          "id": "abbreviation-0",
+          "text": "ГОСТ Р 123.4, п. 3.2: насос Н-725 останавливают при 166 °C. Работу возобновляют только после проверки.",
+          "tenant": "factory",
+          "roles": [
+            "staff"
+          ]
+        }
+      ],
+      "expected_behavior": "answered",
+      "expected_sources": [
+        "abbreviation-0"
+      ],
+      "expected_facts": [
+        "ГОСТ Р 123.4",
+        "п. 3.2",
+        "166 °C",
+        "только после проверки"
+      ],
+      "category": "technical_abbreviations",
+      "tenant": "factory",
+      "roles": [
+        "staff"
+      ]
+    },
+    {
+      "id": "decimal",
+      "query": "Какое значение установлено для Р-422?",
+      "documents": [
+        {
+          "id": "decimal-0",
+          "text": "Для регулятора Р-422 установлено значение 3,75 МПа. Самовольное изменение запрещено.",
+          "tenant": "factory",
+          "roles": [
+            "staff"
+          ]
+        }
+      ],
+      "expected_behavior": "answered",
+      "expected_sources": [
+        "decimal-0"
+      ],
+      "expected_facts": [
+        "3,75 МПа",
+        "изменение запрещено"
+      ],
+      "category": "numbers_units",
+      "tenant": "factory",
+      "roles": [
+        "staff"
+      ]
+    },
+    {
+      "id": "contradiction",
+      "query": "Какое давление Н-372?",
+      "documents": [
+        {
+          "id": "contradiction-0",
+          "text": "Давление насоса Н-372: 3 бар.",
+          "tenant": "factory",
+          "roles": [
+            "staff"
+          ]
+        },
+        {
+          "id": "contradiction-1",
+          "text": "Давление насоса Н-372: 9 бар.",
+          "tenant": "factory",
+          "roles": [
+            "staff"
+          ]
+        }
+      ],
+      "expected_behavior": "answered",
+      "expected_sources": [
+        "contradiction-0",
+        "contradiction-1"
+      ],
+      "expected_facts": [
+        "3 бар",
+        "9 бар"
+      ],
+      "category": "contradictory_evidence",
+      "tenant": "factory",
+      "roles": [
+        "staff"
+      ]
+    },
+    {
+      "id": "missing",
+      "query": "Какова масса З-5361?",
+      "documents": [
+        {
+          "id": "missing-0",
+          "text": "Узел Л-11 имеет паспорт.",
+          "tenant": "factory",
+          "roles": [
+            "staff"
+          ]
+        }
+      ],
+      "expected_behavior": "no_evidence",
+      "expected_sources": [],
+      "expected_facts": [],
+      "category": "no_evidence",
+      "tenant": "factory",
+      "roles": [
+        "staff"
+      ]
+    },
+    {
+      "id": "wrong-asset",
+      "query": "Какое давление З-2467?",
+      "documents": [
+        {
+          "id": "wrong-asset-0",
+          "text": "Давление узла З-366: 5 бар.",
+          "tenant": "factory",
+          "roles": [
+            "staff"
+          ]
+        }
+      ],
+      "expected_behavior": "no_evidence",
+      "expected_sources": [],
+      "expected_facts": [],
+      "category": "no_evidence",
+      "tenant": "factory",
+      "roles": [
+        "staff"
+      ]
+    },
+    {
+      "id": "shared-tenant",
+      "query": "Назови правило для Г-626.",
+      "documents": [
+        {
+          "id": "shared-tenant-0",
+          "text": "Узел Г-626 осматривают перед сменой.",
+          "tenant": "factory",
+          "roles": [
+            "staff"
+          ]
+        },
+        {
+          "id": "foreign-shared",
+          "text": "Узел Г-626: закрытый синтетический показатель 864209753.",
+          "tenant": "other",
+          "roles": [
+            "staff"
+          ]
+        }
+      ],
+      "expected_behavior": "answered",
+      "expected_sources": [
+        "shared-tenant-0"
+      ],
+      "expected_facts": [
+        "осматривают перед сменой"
+      ],
+      "category": "tenant_isolation",
+      "tenant": "factory",
+      "roles": [
+        "staff"
+      ]
+    },
+    {
+      "id": "ocr-new-query",
+      "query": "Приведи регламентную связь датчика Д-8 с контуром К-2.",
+      "documents": [
+        {
+          "id": "scan",
+          "ocr_file": "examples/scan-regulation.pdf",
+          "tenant": "factory",
+          "roles": [
+            "staff"
+          ]
+        }
+      ],
+      "expected_behavior": "answered",
+      "expected_sources": [
+        "scan"
+      ],
+      "expected_facts": [
+        "К-2",
+        "Д-8"
+      ],
+      "category": "ocr",
+      "tenant": "factory",
+      "roles": [
+        "staff"
+      ]
+    },
+    {
+      "id": "same-asset-missing",
+      "query": "Каково напряжение питания Б-61075?",
+      "documents": [
+        {
+          "id": "same-asset-missing-0",
+          "text": "Блок Б-61075 осматривают после смены.",
+          "tenant": "factory",
+          "roles": [
+            "staff"
+          ]
+        }
+      ],
+      "expected_behavior": "no_evidence",
+      "expected_sources": [],
+      "expected_facts": [],
+      "category": "no_evidence",
+      "tenant": "factory",
+      "roles": [
+        "staff"
+      ]
+    },
+    {
+      "id": "selective-source",
+      "query": "Укажи напряжение питания Б-72608.",
+      "documents": [
+        {
+          "id": "selective-source-0",
+          "text": "Напряжение питания блока Б-72608: 110 В.",
+          "tenant": "factory",
+          "roles": [
+            "staff"
+          ]
+        },
+        {
+          "id": "selective-source-1",
+          "text": "Корпус блока Б-72608 окрашен в серый цвет.",
+          "tenant": "factory",
+          "roles": [
+            "staff"
+          ]
+        }
+      ],
+      "expected_behavior": "answered",
+      "expected_sources": [
+        "selective-source-0"
+      ],
+      "expected_facts": [
+        "110 В"
+      ],
+      "category": "irrelevant_source_selection",
+      "tenant": "factory",
+      "roles": [
+        "staff"
+      ]
+    },
+    {
+      "id": "bridge-with-decoy",
+      "query": "Как связан Н-80081 с Д-88124?",
+      "documents": [
+        {
+          "id": "bridge-with-decoy-0",
+          "text": "Установка Н-80081 имеет синюю маркировку.",
+          "tenant": "factory",
+          "roles": [
+            "staff"
+          ]
+        },
+        {
+          "id": "bridge-with-decoy-1",
+          "text": "Насос Н-80081 соединён с контуром К-41431.",
+          "tenant": "factory",
+          "roles": [
+            "staff"
+          ]
+        },
+        {
+          "id": "bridge-with-decoy-2",
+          "text": "Контур К-41431 передаёт показания датчику Д-88124.",
+          "tenant": "factory",
+          "roles": [
+            "staff"
+          ]
+        }
+      ],
+      "expected_behavior": "answered",
+      "expected_sources": [
+        "bridge-with-decoy-1",
+        "bridge-with-decoy-2"
+      ],
+      "expected_facts": [
+        "Н-80081 соединён с контуром К-41431",
+        "К-41431 передаёт показания датчику Д-88124"
+      ],
+      "category": "multi_hop_decoy",
+      "tenant": "factory",
+      "roles": [
+        "staff"
+      ]
+    },
+    {
+      "id": "late-source",
+      "query": "Какое напряжение питания указано для Б-74198?",
+      "documents": [
+        {
+          "id": "late-source-0",
+          "text": "Блок Б-74198 осматривают ежемесячно.",
+          "tenant": "factory",
+          "roles": [
+            "staff"
+          ]
+        },
+        {
+          "id": "late-source-1",
+          "text": "Для блока Б-74198 предусмотрен защитный кожух.",
+          "tenant": "factory",
+          "roles": [
+            "staff"
+          ]
+        },
+        {
+          "id": "late-source-2",
+          "text": "Питание блока Б-74198: 36 В.",
+          "tenant": "factory",
+          "roles": [
+            "staff"
+          ]
+        }
+      ],
+      "expected_behavior": "answered",
+      "expected_sources": [
+        "late-source-2"
+      ],
+      "expected_facts": [
+        "36 В"
+      ],
+      "category": "context_order",
+      "tenant": "factory",
+      "roles": [
+        "staff"
+      ]
+    }
+  ]
+}

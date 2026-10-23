@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="11" time="2.543" timestamp="2026-10-20T12:19:17.559162+00:00" hostname="f48869a8140e"><testcase classname="tests.test_independent_final" name="test_writer_reserved_before_release_is_observed" time="0.161" /><testcase classname="tests.test_independent_final" name="test_release_reservation_orders_later_raw_writer_and_freezes_result" time="0.463" /><testcase classname="tests.test_independent_final" name="test_slow_sse_client_does_not_hold_sql_writer" time="1.076" /><testcase classname="tests.test_independent_final" name="test_russian_technical_clipping_never_becomes_released_assertion[120 \xb0C.]" time="0.001" /><testcase classname="tests.test_independent_final" name="test_russian_technical_clipping_never_becomes_released_assertion[\u0413\u041e\u0421\u0422 \u0420 123.4.]" time="0.000" /><testcase classname="tests.test_independent_final" name="test_russian_technical_clipping_never_becomes_released_assertion[\u043f. 3.2.]" time="0.000" /><testcase classname="tests.test_independent_final" name="test_russian_technical_clipping_never_becomes_released_assertion[\u041a-2.]" time="0.000" /><testcase classname="tests.test_independent_final" name="test_russian_technical_clipping_never_becomes_released_assertion[\u0440\u0430\u0437\u0440\u0435\u0448\u0451\u043d.]" time="0.000" /><testcase classname="tests.test_independent_final" name="test_mentions_two_hops_tenant_caps_reingest_and_deletion" time="0.504" /><testcase classname="tests.test_independent_final" name="test_F06_interrupted_stream_is_not_accounted_as_success[cancel]" time="0.001"><failure message="assert 1.0 == 0.0">failure = 'cancel'
+
+    @pytest.mark.parametrize('failure', ['cancel', 'send_error'])
+    def test_F06_interrupted_stream_is_not_accounted_as_success(failure):
+        def counts():
+            return {out:sum(s.value for m in http_requests.collect() for s in m.samples
+                           if s.name == 'knowledge_http_requests_total' and s.labels.get('outcome') == out)
+                    for out in ('success', 'cancelled', 'transport_error')}
+        async def app(scope, receive, send):
+            await send({'type':'http.response.start', 'status':200})
+            if failure == 'cancel':
+                raise asyncio.CancelledError()
+            await send({'type':'http.response.body', 'body':b'x', 'more_body':False})
+        async def send(message):
+            if message['type'] == 'http.response.body':
+                raise OSError('Disconnected')
+        scope = {'type':'http', 'method':'POST', 'route':SimpleNamespace(path='/query/stream')}
+        before = counts()
+        with pytest.raises(asyncio.CancelledError if failure == 'cancel' else OSError):
+            asyncio.run(HTTPAccounting(app)(scope, None, send))
+        after = counts()
+        assert sum(after.values()) - sum(before.values()) == 1
+&gt;       assert after['success'] == before['success']
+E       assert 1.0 == 0.0
+
+tests/test_independent_final.py:147: AssertionError</failure></testcase><testcase classname="tests.test_independent_final" name="test_F06_interrupted_stream_is_not_accounted_as_success[send_error]" time="0.001"><failure message="assert 2.0 == 1.0">failure = 'send_error'
+
+    @pytest.mark.parametrize('failure', ['cancel', 'send_error'])
+    def test_F06_interrupted_stream_is_not_accounted_as_success(failure):
+        def counts():
+            return {out:sum(s.value for m in http_requests.collect() for s in m.samples
+                           if s.name == 'knowledge_http_requests_total' and s.labels.get('outcome') == out)
+                    for out in ('success', 'cancelled', 'transport_error')}
+        async def app(scope, receive, send):
+            await send({'type':'http.response.start', 'status':200})
+            if failure == 'cancel':
+                raise asyncio.CancelledError()
+            await send({'type':'http.response.body', 'body':b'x', 'more_body':False})
+        async def send(message):
+            if message['type'] == 'http.response.body':
+                raise OSError('Disconnected')
+        scope = {'type':'http', 'method':'POST', 'route':SimpleNamespace(path='/query/stream')}
+        before = counts()
+        with pytest.raises(asyncio.CancelledError if failure == 'cancel' else OSError):
+            asyncio.run(HTTPAccounting(app)(scope, None, send))
+        after = counts()
+        assert sum(after.values()) - sum(before.values()) == 1
+&gt;       assert after['success'] == before['success']
+E       assert 2.0 == 1.0
+
+tests/test_independent_final.py:147: AssertionError</failure></testcase></testsuite></testsuites>

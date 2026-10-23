@@ -1,0 +1,114 @@
+{
+  "timestamp": 1792506327.1182575,
+  "historical_reference": {
+    "successful_rps": 2.53,
+    "p95_ms": 1631.63
+  },
+  "runs": {
+    "baseline/gpu-48-c4": {
+      "http": {
+        "scope": "HTTP through loopback gateway to Docker backend; server profile recorded separately",
+        "generation_modes": [
+          "extractive-invalid-generation"
+        ],
+        "system": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.41",
+        "processor": "",
+        "requests": 48,
+        "concurrency": 4,
+        "elapsed_seconds": 19.018,
+        "successful_rps": 2.52,
+        "errors": 0,
+        "p50_ms": 1574.03,
+        "p95_ms": 1632.45,
+        "p99_ms": 1670.07
+      },
+      "vllm_deltas": {
+        "vllm:prompt_tokens_total{engine=\"0\",model_name=\"qwen-local\"}": 19008.0,
+        "vllm:generation_tokens_total{engine=\"0\",model_name=\"qwen-local\"}": 5280.0,
+        "vllm:request_success_total{engine=\"0\",finished_reason=\"stop\",model_name=\"qwen-local\"}": 48.0,
+        "vllm:request_success_total{engine=\"0\",finished_reason=\"length\",model_name=\"qwen-local\"}": 0.0,
+        "vllm:request_success_total{engine=\"0\",finished_reason=\"abort\",model_name=\"qwen-local\"}": 0.0
+      },
+      "raw_samples": 48
+    },
+    "baseline/gpu-192-c4": {
+      "http": {
+        "scope": "HTTP through loopback gateway to Docker backend; server profile recorded separately",
+        "generation_modes": [
+          "extractive-invalid-generation"
+        ],
+        "system": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.41",
+        "processor": "",
+        "requests": 192,
+        "concurrency": 4,
+        "elapsed_seconds": 77.373,
+        "successful_rps": 2.48,
+        "errors": 0,
+        "p50_ms": 1597.78,
+        "p95_ms": 1685.9,
+        "p99_ms": 1769.03
+      },
+      "vllm_deltas": {
+        "vllm:prompt_tokens_total{engine=\"0\",model_name=\"qwen-local\"}": 76032.0,
+        "vllm:generation_tokens_total{engine=\"0\",model_name=\"qwen-local\"}": 21120.0,
+        "vllm:request_success_total{engine=\"0\",finished_reason=\"stop\",model_name=\"qwen-local\"}": 192.0,
+        "vllm:request_success_total{engine=\"0\",finished_reason=\"length\",model_name=\"qwen-local\"}": 0.0,
+        "vllm:request_success_total{engine=\"0\",finished_reason=\"abort\",model_name=\"qwen-local\"}": 0.0
+      },
+      "raw_samples": 192
+    },
+    "selected/gpu-48-c4": {
+      "http": {
+        "scope": "HTTP through loopback gateway to Docker backend; server profile recorded separately",
+        "generation_modes": [
+          "vllm"
+        ],
+        "system": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.41",
+        "processor": "",
+        "requests": 48,
+        "concurrency": 4,
+        "elapsed_seconds": 5.54,
+        "successful_rps": 8.66,
+        "errors": 0,
+        "p50_ms": 428.39,
+        "p95_ms": 690.8,
+        "p99_ms": 728.64
+      },
+      "vllm_deltas": {
+        "vllm:prompt_tokens_total{engine=\"0\",model_name=\"qwen-local\"}": 19920.0,
+        "vllm:generation_tokens_total{engine=\"0\",model_name=\"qwen-local\"}": 864.0,
+        "vllm:request_success_total{engine=\"0\",finished_reason=\"stop\",model_name=\"qwen-local\"}": 48.0,
+        "vllm:request_success_total{engine=\"0\",finished_reason=\"length\",model_name=\"qwen-local\"}": 0.0,
+        "vllm:request_success_total{engine=\"0\",finished_reason=\"abort\",model_name=\"qwen-local\"}": 0.0
+      },
+      "raw_samples": 48
+    },
+    "selected/gpu-192-c4": {
+      "http": {
+        "scope": "HTTP through loopback gateway to Docker backend; server profile recorded separately",
+        "generation_modes": [
+          "vllm"
+        ],
+        "system": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.41",
+        "processor": "",
+        "requests": 192,
+        "concurrency": 4,
+        "elapsed_seconds": 20.611,
+        "successful_rps": 9.32,
+        "errors": 0,
+        "p50_ms": 416.92,
+        "p95_ms": 468.75,
+        "p99_ms": 834.1
+      },
+      "vllm_deltas": {
+        "vllm:prompt_tokens_total{engine=\"0\",model_name=\"qwen-local\"}": 79680.0,
+        "vllm:generation_tokens_total{engine=\"0\",model_name=\"qwen-local\"}": 3456.0,
+        "vllm:request_success_total{engine=\"0\",finished_reason=\"stop\",model_name=\"qwen-local\"}": 192.0,
+        "vllm:request_success_total{engine=\"0\",finished_reason=\"length\",model_name=\"qwen-local\"}": 0.0,
+        "vllm:request_success_total{engine=\"0\",finished_reason=\"abort\",model_name=\"qwen-local\"}": 0.0
+      },
+      "raw_samples": 192
+    }
+  },
+  "limitations": "Same warm prefix-cache workload, single runs; not soak or mixed corpus capacity. Direct selected invocations did not capture host GPU CSV."
+}

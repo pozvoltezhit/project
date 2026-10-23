@@ -1,0 +1,9 @@
+test_F01_after_validate_original_audit_hook (tests.test_remediation.SecurityRegression.test_F01_after_validate_original_audit_hook) ... ok
+test_F01_during_generation (tests.test_remediation.SecurityRegression.test_F01_during_generation) ... ok
+test_F01_concurrent_writer_before_finalization (tests.test_remediation.SecurityRegression.test_F01_concurrent_writer_before_finalization) ... ok
+test_F02_token_budget_is_enforced (tests.test_remediation.SecurityRegression.test_F02_token_budget_is_enforced) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 1.576s
+
+OK

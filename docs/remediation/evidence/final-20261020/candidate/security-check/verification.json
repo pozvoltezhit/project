@@ -1,0 +1,15 @@
+{
+  "bundle_hash": "2be697f9153b71566da2aaeb5355105cc6ad2b9a349d2a0c3c2bfc4d8156b6a1",
+  "timestamp": 1792499085.5006382,
+  "phases": {
+    "lint": 0,
+    "types": 0,
+    "unit": 0,
+    "existing_check": 0,
+    "literal_secret_scan": 0,
+    "tree_unchanged": 0
+  },
+  "tests": 49,
+  "exit_code": 0,
+  "secret_scan": "Local AST literal scan only, not a CVE/security certification"
+}

@@ -1,0 +1,16 @@
+{
+  "scope": "HTTP through loopback gateway to Docker backend; server profile recorded separately",
+  "generation_modes": [
+    "vllm"
+  ],
+  "system": "Windows-11-10.0.28000-SP0",
+  "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+  "requests": 24,
+  "concurrency": 4,
+  "elapsed_seconds": 10.567,
+  "successful_rps": 2.27,
+  "errors": 0,
+  "p50_ms": 1675.28,
+  "p95_ms": 1964.63,
+  "p99_ms": 1972.34
+}

@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "timestamp": 1792514843.0893173,
+  "manifest_sha256": "43b9bd1468b3c5eba03893cac025e77f93380ff761c9f3d3134607e97afcaca8",
+  "image_id": "sha256:876185015815686554dcf4d223d674ec571433d27e6281792b952c1af6ae203e",
+  "bundle": "96d03e4d965d0b1a694da71b2f7f4093c5d9c9594abe8e25a56227d869934f51",
+  "source_files": 93,
+  "archive_sha256": "06acd1bb8d78c09cca7f491039c2684984e3a0677af381737934b24907a9e49b",
+  "core_reports_verified": 5,
+  "supplemental_files_verified": 16,
+  "documentation_files_bound": 13,
+  "model_files_verified": 11,
+  "tests": 69,
+  "failures": 0,
+  "skipped": 0,
+  "frozen_validation_order_verified": true,
+  "raw_strict_gate_preserved": true,
+  "readiness": {
+    "decision": "GO",
+    "scope": "synthetic_mvp",
+    "production_approval": false,
+    "reasons": []
+  },
+  "commit_created": false,
+  "remote_ci": "NOT RUN"
+}

@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-08T11:58:49.449765+00:00",
+  "checks": "PASS: HTTP RBAC/tenant/session/injection, scanned PDF OCR, Qdrant ACL, Neo4j mirror, Jaeger spans, Prometheus, blocked backend egress",
+  "generation_mode": "vllm",
+  "neo4j_nodes": 10,
+  "neo4j_edges": 3,
+  "trace_operations": [
+    "GET /graph",
+    "GET /metrics",
+    "POST /query",
+    "agent.expand",
+    "agent.guard",
+    "agent.plan",
+    "agent.rerank",
+    "agent.retrieve",
+    "fastapi.dependencies",
+    "fastapi.endpoint",
+    "fastapi.serialization",
+    "query"
+  ],
+  "user_b_evidence": [
+    {
+      "chunk_id": "383c400fd8d9dbb157c6ebef",
+      "quote": "Насос Н-17 подключен к контуру К-2.",
+      "title": "01-equipment.txt",
+      "page": 1,
+      "version": 2
+    },
+    {
+      "chunk_id": "fca53e0f41ac9e1d9893e65a",
+      "quote": "Контур К-2 контролируется датчиком Д-8.",
+      "title": "02-control.txt",
+      "page": 1,
+      "version": 2
+    }
+  ],
+  "ocr_text": "Учебный технический регламент\n\nНасос Н-17 подключен к контуру К-2.\nКонтур К-2 контролируется датчиком Д-8.\nРежим: 100 оборотов в минуту.\n\nСинтетический документ для проверки ОСК.\n"
+}

@@ -1,0 +1,36 @@
+{
+  "checks": [
+    {
+      "check": "graph-expansion-adds-evidence-and-enforces-ACL",
+      "status": "PASS",
+      "detail": "Bridge absent from lexical query; added by allowed graph traversal"
+    },
+    {
+      "check": "normalized-query-guard",
+      "status": "FAIL",
+      "detail": "AssertionError: answered"
+    },
+    {
+      "check": "normalized-document-quarantine",
+      "status": "FAIL",
+      "detail": "AssertionError: NFKC-obfuscated known injection was stored"
+    },
+    {
+      "check": "unavailable-vector-service",
+      "status": "FAIL",
+      "detail": "AssertionError: HTTP 500: Internal Server Error"
+    },
+    {
+      "check": "relevant-input-boundaries",
+      "status": "PASS",
+      "detail": "Empty/whitespace/over-limit query; empty source; no evidence"
+    },
+    {
+      "check": "repeat-ingestion-and-stale-memory",
+      "status": "PASS",
+      "detail": "Duplicate roles deduplicated; replaced source and memory reauthorized"
+    }
+  ],
+  "passed": 3,
+  "total": 6
+}

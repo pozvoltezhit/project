@@ -1,0 +1,16 @@
+{
+  "timestamp": 1792514974.9715157,
+  "status": "PASS",
+  "readiness": {
+    "decision": "GO",
+    "scope": "synthetic_mvp",
+    "production_approval": false,
+    "reasons": []
+  },
+  "delivery_validation_sha256": "242dc20b0fd56cd9d874aaf5b8a18757602944bbfdc3d543a78d24cbee4c3ad8",
+  "stand_final_sha256": "27c78a74663992e9a2b08197a7936db94f27a4e6b0b29e79c88b9dd432b27a9d",
+  "manifest_sha256": "43b9bd1468b3c5eba03893cac025e77f93380ff761c9f3d3134607e97afcaca8",
+  "owned_containers_stopped": 8,
+  "retained_volumes": 2,
+  "commit_or_push_performed": false
+}

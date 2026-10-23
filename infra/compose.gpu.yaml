@@ -1,0 +1,28 @@
+services:
+  prometheus:
+    volumes: ["./prometheus.gpu.yml:/etc/prometheus/prometheus.yml:ro"]
+  backend:
+    environment:
+      LLM_URL: "http://vllm:8000"
+      LLM_MAX_MODEL_LEN: "${KNOWLEDGE_MODEL_CONTEXT:-4096}"
+      LLM_OUTPUT_TOKENS: "${KNOWLEDGE_OUTPUT_TOKENS:-700}"
+      LLM_SAFETY_MARGIN: "${KNOWLEDGE_TOKEN_MARGIN:-64}"
+    depends_on:
+      vllm: {condition: service_healthy}
+  vllm:
+    image: vllm/vllm-openai:v0.10.2
+    volumes: ["../models/qwen-awq:/models/qwen:ro"]
+    command: ["--model", "/models/qwen", "--served-model-name", "qwen-local", "--quantization", "awq_marlin", "--dtype", "half", "--max-model-len", "${KNOWLEDGE_MODEL_CONTEXT:-4096}", "--max-num-seqs", "4", "--gpu-memory-utilization", "0.80", "--max-num-batched-tokens", "1024", "--enable-prefix-caching"]
+    environment: {HF_HUB_OFFLINE: "1", TRANSFORMERS_OFFLINE: "1"}
+    ipc: host
+    deploy:
+      resources:
+        reservations:
+          devices: [{driver: nvidia, count: 1, capabilities: [gpu]}]
+    networks: [internal]
+    healthcheck:
+      test: ["CMD", "python3", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=3)"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 180s

@@ -1,0 +1,8 @@
+{
+  "ready_before": 200,
+  "ready_dependency_down": 503,
+  "health_dependency_down": 200,
+  "query_dependency_down": 503,
+  "ready_recovered": 200,
+  "decision": "PASS"
+}

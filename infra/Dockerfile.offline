@@ -1,0 +1,12 @@
+# Offline application rebase onto an already prepared, verified Python/OCR image.
+# This is not a claim that apt/base images can be built from scratch offline.
+ARG BASE_IMAGE=course-knowledge-audit:20261020
+FROM ${BASE_IMAGE}
+COPY requirements-lock.txt /tmp/expected-requirements-lock.txt
+RUN python -c "import hashlib,importlib.metadata,pathlib; expected=pathlib.Path('/tmp/expected-requirements-lock.txt'); assert hashlib.sha256(expected.read_bytes()).digest()==hashlib.sha256(pathlib.Path('/app/requirements-lock.txt').read_bytes()).digest(); pins=[line.split('==') for line in expected.read_text().splitlines() if '==' in line]; assert all(importlib.metadata.version(name)==version for name,version in pins)"
+COPY backend backend
+COPY frontend frontend
+COPY examples examples
+COPY eval eval
+COPY models/qwen-manifest.json models/qwen-manifest.json
+ENV PYTHONDONTWRITEBYTECODE=1

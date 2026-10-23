@@ -1,0 +1,47 @@
+{
+  "duration_seconds": 374.046484,
+  "video": "H.264 1920x1080 10fps",
+  "audio": "AAC Russian local TTS",
+  "chapters": [
+    {
+      "title": "Архитектура закрытой платформы",
+      "duration": 41.3,
+      "spoken_seconds": 39.32
+    },
+    {
+      "title": "Ingestion и реальный OCR",
+      "duration": 41.4,
+      "spoken_seconds": 39.45
+    },
+    {
+      "title": "Neo4j: provenance и двухшаговый мост",
+      "duration": 45,
+      "spoken_seconds": 41.86
+    },
+    {
+      "title": "User B: ответ из двух разрешённых источников",
+      "duration": 45,
+      "spoken_seconds": 42.91
+    },
+    {
+      "title": "RBAC: одинаковый вопрос, разные права",
+      "duration": 50,
+      "spoken_seconds": 41.61
+    },
+    {
+      "title": "Jaeger: реальные стадии и локальная генерация",
+      "duration": 50,
+      "spoken_seconds": 40.7
+    },
+    {
+      "title": "vLLM: загрузка, AWQ Marlin и KV cache",
+      "duration": 50,
+      "spoken_seconds": 45.09
+    },
+    {
+      "title": "Grafana, нагрузка и границы результата",
+      "duration": 51.3,
+      "spoken_seconds": 49.34
+    }
+  ]
+}

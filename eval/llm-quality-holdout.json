@@ -1,0 +1,474 @@
+{
+  "version": "llm-quality-holdout-v1",
+  "synthetic": true,
+  "frozen_before_prompt_tuning": true,
+  "timestamp": 1792503419.1495562,
+  "seed": 16234942334176296735,
+  "annotation": "Author-generated, not independent domain expert labels",
+  "ocr_limitation": "New query reuses the existing synthetic image-only OCR source; text cases are newly generated",
+  "cases": [
+    {
+      "id": "factual-0",
+      "query": "Укажи порог отключения Т-684.",
+      "documents": [
+        {
+          "id": "factual-0-0",
+          "text": "Узел Т-684 отключают при достижении 118 °C.",
+          "tenant": "factory",
+          "roles": [
+            "staff"
+          ]
+        }
+      ],
+      "expected_behavior": "answered",
+      "expected_sources": [
+        "factual-0-0"
+      ],
+      "expected_facts": [
+        "118 °C"
+      ],
+      "category": "factual_units",
+      "tenant": "factory",
+      "roles": [
+        "staff"
+      ]
+    },
+    {
+      "id": "factual-1",
+      "query": "Укажи порог отключения Т-545.",
+      "documents": [
+        {
+          "id": "factual-1-0",
+          "text": "Узел Т-545 отключают при достижении 152 °C.",
+          "tenant": "factory",
+          "roles": [
+            "staff"
+          ]
+        }
+      ],
+      "expected_behavior": "answered",
+      "expected_sources": [
+        "factual-1-0"
+      ],
+      "expected_facts": [
+        "152 °C"
+      ],
+      "category": "factual_units",
+      "tenant": "factory",
+      "roles": [
+        "staff"
+      ]
+    },
+    {
+      "id": "pressure",
+      "query": "Каково допустимое давление насоса Н-863?",
+      "documents": [
+        {
+          "id": "pressure-0",
+          "text": "Давление насоса Н-863 не должно превышать 8 бар.",
+          "tenant": "factory",
+          "roles": [
+            "staff"
+          ]
+        }
+      ],
+      "expected_behavior": "answered",
+      "expected_sources": [
+        "pressure-0"
+      ],
+      "expected_facts": [
+        "не должно превышать 8 бар"
+      ],
+      "category": "numbers",
+      "tenant": "factory",
+      "roles": [
+        "staff"
+      ]
+    },
+    {
+      "id": "negation",
+      "query": "Разрешена ли работа П-534?",
+      "documents": [
+        {
+          "id": "negation-0",
+          "text": "Работа агрегата П-534 не разрешена.",
+          "tenant": "factory",
+          "roles": [
+            "staff"
+          ]
+        }
+      ],
+      "expected_behavior": "answered",
+      "expected_sources": [
+        "negation-0"
+      ],
+      "expected_facts": [
+        "не разрешена"
+      ],
+      "category": "negation",
+      "tenant": "factory",
+      "roles": [
+        "staff"
+      ]
+    },
+    {
+      "id": "condition",
+      "query": "Когда допускается запуск А-444?",
+      "documents": [
+        {
+          "id": "condition-0",
+          "text": "Запуск узла А-444 допускается только при исправном датчике Д-736. При отказе датчика запуск запрещён.",
+          "tenant": "factory",
+          "roles": [
+            "staff"
+          ]
+        }
+      ],
+      "expected_behavior": "answered",
+      "expected_sources": [
+        "condition-0"
+      ],
+      "expected_facts": [
+        "только при исправном датчике Д-736",
+        "запуск запрещён"
+      ],
+      "category": "condition",
+      "tenant": "factory",
+      "roles": [
+        "staff"
+      ]
+    },
+    {
+      "id": "exception",
+      "query": "Опиши порядок обслуживания К-494 и исключение из него.",
+      "documents": [
+        {
+          "id": "exception-0",
+          "text": "Клапан К-494 закрывают перед обслуживанием. Исключение: продувка разрешается после согласования с диспетчером.",
+          "tenant": "factory",
+          "roles": [
+            "staff"
+          ]
+        }
+      ],
+      "expected_behavior": "answered",
+      "expected_sources": [
+        "exception-0"
+      ],
+      "expected_facts": [
+        "закрывают перед обслуживанием",
+        "после согласования с диспетчером"
+      ],
+      "category": "exception",
+      "tenant": "factory",
+      "roles": [
+        "staff"
+      ]
+    },
+    {
+      "id": "bridge-0",
+      "query": "Через какой контур Н-2805 связан с Д-8937?",
+      "documents": [
+        {
+          "id": "bridge-0-0",
+          "text": "Насос Н-2805 подключён к контуру К-1341.",
+          "tenant": "factory",
+          "roles": [
+            "staff"
+          ]
+        },
+        {
+          "id": "bridge-0-1",
+          "text": "Контур К-1341 контролируется датчиком Д-8937.",
+          "tenant": "factory",
+          "roles": [
+            "staff"
+          ]
+        }
+      ],
+      "expected_behavior": "answered",
+      "expected_sources": [
+        "bridge-0-0",
+        "bridge-0-1"
+      ],
+      "expected_facts": [
+        "Н-2805 подключён к контуру К-1341",
+        "К-1341 контролируется датчиком Д-8937"
+      ],
+      "category": "multi_hop",
+      "tenant": "factory",
+      "roles": [
+        "staff"
+      ]
+    },
+    {
+      "id": "bridge-1",
+      "query": "Через какой контур Н-5163 связан с Д-5503?",
+      "documents": [
+        {
+          "id": "bridge-1-0",
+          "text": "Насос Н-5163 подключён к контуру К-4488.",
+          "tenant": "factory",
+          "roles": [
+            "staff"
+          ]
+        },
+        {
+          "id": "bridge-1-1",
+          "text": "Контур К-4488 контролируется датчиком Д-5503.",
+          "tenant": "factory",
+          "roles": [
+            "staff"
+          ]
+        }
+      ],
+      "expected_behavior": "answered",
+      "expected_sources": [
+        "bridge-1-0",
+        "bridge-1-1"
+      ],
+      "expected_facts": [
+        "Н-5163 подключён к контуру К-4488",
+        "К-4488 контролируется датчиком Д-5503"
+      ],
+      "category": "multi_hop",
+      "tenant": "factory",
+      "roles": [
+        "staff"
+      ]
+    },
+    {
+      "id": "two-sources",
+      "query": "Приведи правила для узла У-405 из обеих инструкций.",
+      "documents": [
+        {
+          "id": "two-sources-0",
+          "text": "Узел У-405 отключается при 105 °C.",
+          "tenant": "factory",
+          "roles": [
+            "staff"
+          ]
+        },
+        {
+          "id": "two-sources-1",
+          "text": "Перед ремонтом узла У-405 питание отключают.",
+          "tenant": "factory",
+          "roles": [
+            "staff"
+          ]
+        }
+      ],
+      "expected_behavior": "answered",
+      "expected_sources": [
+        "two-sources-0",
+        "two-sources-1"
+      ],
+      "expected_facts": [
+        "105 °C",
+        "питание отключают"
+      ],
+      "category": "multiple_sources",
+      "tenant": "factory",
+      "roles": [
+        "staff"
+      ]
+    },
+    {
+      "id": "abbreviation",
+      "query": "Что требует п. 3.2 для Н-290?",
+      "documents": [
+        {
+          "id": "abbreviation-0",
+          "text": "ГОСТ Р 123.4, п. 3.2: насос Н-290 останавливают при 113 °C. Работу возобновляют только после проверки.",
+          "tenant": "factory",
+          "roles": [
+            "staff"
+          ]
+        }
+      ],
+      "expected_behavior": "answered",
+      "expected_sources": [
+        "abbreviation-0"
+      ],
+      "expected_facts": [
+        "ГОСТ Р 123.4",
+        "п. 3.2",
+        "113 °C",
+        "только после проверки"
+      ],
+      "category": "technical_abbreviations",
+      "tenant": "factory",
+      "roles": [
+        "staff"
+      ]
+    },
+    {
+      "id": "decimal",
+      "query": "Какое значение установлено для Р-889?",
+      "documents": [
+        {
+          "id": "decimal-0",
+          "text": "Для регулятора Р-889 установлено значение 3,75 МПа. Самовольное изменение запрещено.",
+          "tenant": "factory",
+          "roles": [
+            "staff"
+          ]
+        }
+      ],
+      "expected_behavior": "answered",
+      "expected_sources": [
+        "decimal-0"
+      ],
+      "expected_facts": [
+        "3,75 МПа",
+        "изменение запрещено"
+      ],
+      "category": "numbers_units",
+      "tenant": "factory",
+      "roles": [
+        "staff"
+      ]
+    },
+    {
+      "id": "contradiction",
+      "query": "Какое давление Н-515?",
+      "documents": [
+        {
+          "id": "contradiction-0",
+          "text": "Давление насоса Н-515: 3 бар.",
+          "tenant": "factory",
+          "roles": [
+            "staff"
+          ]
+        },
+        {
+          "id": "contradiction-1",
+          "text": "Давление насоса Н-515: 9 бар.",
+          "tenant": "factory",
+          "roles": [
+            "staff"
+          ]
+        }
+      ],
+      "expected_behavior": "answered",
+      "expected_sources": [
+        "contradiction-0",
+        "contradiction-1"
+      ],
+      "expected_facts": [
+        "3 бар",
+        "9 бар"
+      ],
+      "category": "contradictory_evidence",
+      "tenant": "factory",
+      "roles": [
+        "staff"
+      ]
+    },
+    {
+      "id": "missing",
+      "query": "Какова масса З-6368?",
+      "documents": [
+        {
+          "id": "missing-0",
+          "text": "Узел Л-11 имеет паспорт.",
+          "tenant": "factory",
+          "roles": [
+            "staff"
+          ]
+        }
+      ],
+      "expected_behavior": "no_evidence",
+      "expected_sources": [],
+      "expected_facts": [],
+      "category": "no_evidence",
+      "tenant": "factory",
+      "roles": [
+        "staff"
+      ]
+    },
+    {
+      "id": "wrong-asset",
+      "query": "Какое давление З-8805?",
+      "documents": [
+        {
+          "id": "wrong-asset-0",
+          "text": "Давление узла З-676: 5 бар.",
+          "tenant": "factory",
+          "roles": [
+            "staff"
+          ]
+        }
+      ],
+      "expected_behavior": "no_evidence",
+      "expected_sources": [],
+      "expected_facts": [],
+      "category": "no_evidence",
+      "tenant": "factory",
+      "roles": [
+        "staff"
+      ]
+    },
+    {
+      "id": "shared-tenant",
+      "query": "Назови правило для Г-722.",
+      "documents": [
+        {
+          "id": "shared-tenant-0",
+          "text": "Узел Г-722 осматривают перед сменой.",
+          "tenant": "factory",
+          "roles": [
+            "staff"
+          ]
+        },
+        {
+          "id": "foreign-shared",
+          "text": "Узел Г-722: закрытый синтетический показатель 864209753.",
+          "tenant": "other",
+          "roles": [
+            "staff"
+          ]
+        }
+      ],
+      "expected_behavior": "answered",
+      "expected_sources": [
+        "shared-tenant-0"
+      ],
+      "expected_facts": [
+        "осматривают перед сменой"
+      ],
+      "category": "tenant_isolation",
+      "tenant": "factory",
+      "roles": [
+        "staff"
+      ]
+    },
+    {
+      "id": "ocr-new-query",
+      "query": "Что в регламенте сказано о контуре К-2 и датчике Д-8?",
+      "documents": [
+        {
+          "id": "scan",
+          "ocr_file": "examples/scan-regulation.pdf",
+          "tenant": "factory",
+          "roles": [
+            "staff"
+          ]
+        }
+      ],
+      "expected_behavior": "answered",
+      "expected_sources": [
+        "scan"
+      ],
+      "expected_facts": [
+        "К-2",
+        "Д-8"
+      ],
+      "category": "ocr",
+      "tenant": "factory",
+      "roles": [
+        "staff"
+      ]
+    }
+  ]
+}

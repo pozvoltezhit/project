@@ -1,0 +1,10 @@
+{
+  "image_id": "sha256:6ee26fe97239ead672a5fabb03b995d6e22584485dfa96cf5b36862a00274e1e",
+  "environment": {
+    "LLM_SAFETY_MARGIN": "64",
+    "LLM_URL": "http://vllm:8000",
+    "LLM_MAX_MODEL_LEN": "4096",
+    "LLM_OUTPUT_TOKENS": "700"
+  },
+  "timestamp": 1792499337.567854
+}

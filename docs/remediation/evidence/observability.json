@@ -1,0 +1,157 @@
+{
+  "decision": "PASS",
+  "timestamp": 1792496856.87094,
+  "expressions": [
+    {
+      "panel": "Query HTTP RPS вЂ” all completed outcomes",
+      "status": 200,
+      "success": true,
+      "series": 1
+    },
+    {
+      "panel": "Query HTTP p95 / p99 вЂ” includes admission",
+      "status": 200,
+      "success": true,
+      "series": 1
+    },
+    {
+      "panel": "Query HTTP p95 / p99 вЂ” includes admission",
+      "status": 200,
+      "success": true,
+      "series": 1
+    },
+    {
+      "panel": "Business outcomes / second вЂ” excludes auth and schema failures",
+      "status": 200,
+      "success": true,
+      "series": 4
+    },
+    {
+      "panel": "Local LLM tokens / second",
+      "status": 200,
+      "success": true,
+      "series": 2
+    },
+    {
+      "panel": "vLLM KV utilization (GPU profile)",
+      "status": 200,
+      "success": true,
+      "series": 1
+    },
+    {
+      "panel": "vLLM queue (GPU profile)",
+      "status": 200,
+      "success": true,
+      "series": 1
+    },
+    {
+      "panel": "Agent stages p95",
+      "status": 200,
+      "success": true,
+      "series": 8
+    },
+    {
+      "panel": "Query 5xx / completed HTTP requests",
+      "status": 200,
+      "success": true,
+      "series": 1
+    },
+    {
+      "panel": "Readiness / required dependencies",
+      "status": 200,
+      "success": true,
+      "series": 8
+    },
+    {
+      "panel": "Admission: active / waiting",
+      "status": 200,
+      "success": true,
+      "series": 1
+    },
+    {
+      "panel": "Admission: active / waiting",
+      "status": 200,
+      "success": true,
+      "series": 1
+    },
+    {
+      "panel": "Admission wait p95",
+      "status": 200,
+      "success": true,
+      "series": 1
+    },
+    {
+      "panel": "Synthetic evaluation coverage / validity",
+      "status": 200,
+      "success": true,
+      "series": 1
+    },
+    {
+      "panel": "Synthetic evaluation coverage / validity",
+      "status": 200,
+      "success": true,
+      "series": 1
+    },
+    {
+      "panel": "Evaluation age вЂ” must be <=24h",
+      "status": 200,
+      "success": true,
+      "series": 1
+    },
+    {
+      "panel": "Estimated RUB / answered query вЂ” configured assumptions",
+      "status": 200,
+      "success": true,
+      "series": 0
+    },
+    {
+      "panel": "Budget rejection rate",
+      "status": 200,
+      "success": true,
+      "series": 1
+    },
+    {
+      "panel": "Synthetic eval failures / invalid cases",
+      "status": 200,
+      "success": true,
+      "series": 1
+    },
+    {
+      "panel": "Synthetic eval failures / invalid cases",
+      "status": 200,
+      "success": true,
+      "series": 1
+    }
+  ],
+  "targets": [
+    {
+      "job": "knowledge",
+      "health": "up"
+    },
+    {
+      "job": "vllm",
+      "health": "up"
+    }
+  ],
+  "trace_operations": [
+    "GET /graph",
+    "GET /history/{session_id}",
+    "GET /metrics",
+    "GET /ready",
+    "POST /query",
+    "agent.expand",
+    "agent.generate",
+    "agent.guard",
+    "agent.plan",
+    "agent.rerank",
+    "agent.retrieve",
+    "agent.validate",
+    "fastapi.dependencies",
+    "fastapi.endpoint",
+    "fastapi.serialization",
+    "llm.generate",
+    "query",
+    "query.finalize"
+  ],
+  "missing_cost_series": "Expected when local price/power inputs are not configured; no fabricated zero"
+}

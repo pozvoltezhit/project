@@ -1,0 +1,174 @@
+vllm-1  | /usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+vllm-1  |   import pynvml  # type: ignore[import]
+vllm-1  | INFO 10-05 01:55:00 [__init__.py:216] Automatically detected platform cuda.
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:55:02 [api_server.py:1896] vLLM API server version 0.10.2
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:55:02 [utils.py:328] non-default args: {'model': '/models/qwen', 'dtype': 'half', 'max_model_len': 4096, 'quantization': 'awq', 'served_model_name': ['qwen-local'], 'gpu_memory_utilization': 0.8, 'enable_prefix_caching': True, 'max_num_batched_tokens': 1024, 'max_num_seqs': 4}
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:55:02 [arg_utils.py:486] HF_HUB_OFFLINE is True, replace model_id [/models/qwen] to model_path [/models/qwen]
+vllm-1  | [1;36m(APIServer pid=1)[0;0m `torch_dtype` is deprecated! Use `dtype` instead!
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:55:07 [__init__.py:742] Resolved architecture: Qwen2ForCausalLM
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:55:07 [__init__.py:1815] Using max model len 4096
+vllm-1  | [1;36m(APIServer pid=1)[0;0m WARNING 10-05 01:55:08 [_ipex_ops.py:16] Import error msg: No module named 'intel_extension_for_pytorch'
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:55:08 [awq_marlin.py:121] Detected that the model can run with awq_marlin, however you specified quantization=awq explicitly, so forcing awq. Use quantization=awq_marlin for faster inference
+vllm-1  | [1;36m(APIServer pid=1)[0;0m WARNING 10-05 01:55:08 [__init__.py:1217] awq quantization is not fully optimized yet. The speed can be slower than non-quantized models.
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:55:08 [scheduler.py:222] Chunked prefill is enabled with max_num_batched_tokens=1024.
+vllm-1  | /usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+vllm-1  |   import pynvml  # type: ignore[import]
+vllm-1  | INFO 10-05 01:55:11 [__init__.py:216] Automatically detected platform cuda.
+vllm-1  | [1;36m(EngineCore_DP0 pid=126)[0;0m INFO 10-05 01:55:12 [core.py:654] Waiting for init message from front-end.
+vllm-1  | [1;36m(EngineCore_DP0 pid=126)[0;0m INFO 10-05 01:55:12 [core.py:76] Initializing a V1 LLM engine (v0.10.2) with config: model='/models/qwen', speculative_config=None, tokenizer='/models/qwen', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.float16, max_seq_len=4096, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, disable_custom_all_reduce=False, quantization=awq, enforce_eager=False, kv_cache_dtype=auto, device_config=cuda, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=0, served_model_name=qwen-local, enable_prefix_caching=True, chunked_prefill_enabled=True, use_async_output_proc=True, pooler_config=None, compilation_config={"level":3,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":[],"splitting_ops":["vllm.unified_attention","vllm.unified_attention_with_output","vllm.mamba_mixer2","vllm.mamba_mixer","vllm.short_conv","vllm.linear_attention","vllm.plamo2_mamba_mixer","vllm.gdn_attention"],"use_inductor":true,"compile_sizes":[],"inductor_compile_config":{"enable_auto_functionalized_v2":false},"inductor_passes":{},"cudagraph_mode":1,"use_cudagraph":true,"cudagraph_num_of_warmups":1,"cudagraph_capture_sizes":[8,4,2,1],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"pass_config":{},"max_capture_size":8,"local_cache_dir":null}
+vllm-1  | [1;36m(EngineCore_DP0 pid=126)[0;0m /usr/local/lib/python3.12/dist-packages/vllm/executor/uniproc_executor.py:31: UserWarning: Failed to get the IP address, using 0.0.0.0 by default.The value can be set by the environment variable VLLM_HOST_IP or HOST_IP.
+vllm-1  | [1;36m(EngineCore_DP0 pid=126)[0;0m   get_ip(), get_open_port())
+vllm-1  | [1;36m(EngineCore_DP0 pid=126)[0;0m WARNING 10-05 01:55:12 [interface.py:391] Using 'pin_memory=False' as WSL is detected. This may slow down the performance.
+vllm-1  | [1;36m(EngineCore_DP0 pid=126)[0;0m W1005 01:55:12.993000 126 torch/utils/cpp_extension.py:2425] TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+vllm-1  | [1;36m(EngineCore_DP0 pid=126)[0;0m W1005 01:55:12.993000 126 torch/utils/cpp_extension.py:2425] If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'] to specific architectures.
+vllm-1  | [W1005 01:55:14.201290738 socket.cpp:200] [c10d] The hostname of the client socket cannot be retrieved. err=-3
+vllm-1  | [W1005 01:55:14.201626267 socket.cpp:200] [c10d] The hostname of the client socket cannot be retrieved. err=-3
+vllm-1  | [W1005 01:55:14.201970660 ProcessGroupNCCL.cpp:981] Warning: TORCH_NCCL_AVOID_RECORD_STREAMS is the default now, this environment variable is thus deprecated. (function operator())
+vllm-1  | [Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+vllm-1  | [Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+vllm-1  | [Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+vllm-1  | [Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+vllm-1  | [Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+vllm-1  | [Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+vllm-1  | [1;36m(EngineCore_DP0 pid=126)[0;0m INFO 10-05 01:55:14 [parallel_state.py:1165] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+vllm-1  | [1;36m(EngineCore_DP0 pid=126)[0;0m INFO 10-05 01:55:14 [topk_topp_sampler.py:58] Using FlashInfer for top-p & top-k sampling.
+vllm-1  | [1;36m(EngineCore_DP0 pid=126)[0;0m INFO 10-05 01:55:14 [gpu_model_runner.py:2338] Starting to load model /models/qwen...
+vllm-1  | [1;36m(EngineCore_DP0 pid=126)[0;0m INFO 10-05 01:55:14 [gpu_model_runner.py:2370] Loading model from scratch...
+vllm-1  | [1;36m(EngineCore_DP0 pid=126)[0;0m INFO 10-05 01:55:14 [cuda.py:362] Using Flash Attention backend on V1 engine.
+vllm-1  | [1;36m(EngineCore_DP0 pid=126)[0;0m 
+Loading safetensors checkpoint shards:   0% Completed | 0/2 [00:00<?, ?it/s]
+vllm-1  | [1;36m(EngineCore_DP0 pid=126)[0;0m 
+Loading safetensors checkpoint shards:  50% Completed | 1/2 [00:12<00:12, 12.18s/it]
+vllm-1  | [1;36m(EngineCore_DP0 pid=126)[0;0m 
+Loading safetensors checkpoint shards: 100% Completed | 2/2 [00:16<00:00,  7.77s/it]
+vllm-1  | [1;36m(EngineCore_DP0 pid=126)[0;0m 
+Loading safetensors checkpoint shards: 100% Completed | 2/2 [00:16<00:00,  8.43s/it]
+vllm-1  | [1;36m(EngineCore_DP0 pid=126)[0;0m 
+vllm-1  | [1;36m(EngineCore_DP0 pid=126)[0;0m INFO 10-05 01:55:31 [default_loader.py:268] Loading weights took 16.92 seconds
+vllm-1  | [1;36m(EngineCore_DP0 pid=126)[0;0m INFO 10-05 01:55:31 [gpu_model_runner.py:2392] Model loading took 5.2034 GiB and 17.189851 seconds
+vllm-1  | [1;36m(EngineCore_DP0 pid=126)[0;0m INFO 10-05 01:55:35 [backends.py:539] Using cache directory: /root/.cache/vllm/torch_compile_cache/472e7a094d/rank_0_0/backbone for vLLM's torch.compile
+vllm-1  | [1;36m(EngineCore_DP0 pid=126)[0;0m INFO 10-05 01:55:35 [backends.py:550] Dynamo bytecode transform time: 3.24 s
+vllm-1  | [1;36m(EngineCore_DP0 pid=126)[0;0m INFO 10-05 01:55:37 [backends.py:194] Cache the graph for dynamic shape for later use
+vllm-1  | [1;36m(EngineCore_DP0 pid=126)[0;0m [rank0]:W1005 01:55:37.988000 126 torch/_inductor/utils.py:1436] [0/0] Not enough SMs to use max_autotune_gemm mode
+vllm-1  | [1;36m(EngineCore_DP0 pid=126)[0;0m INFO 10-05 01:55:50 [backends.py:215] Compiling a graph for dynamic shape takes 14.89 s
+vllm-1  | [1;36m(EngineCore_DP0 pid=126)[0;0m INFO 10-05 01:55:51 [monitor.py:34] torch.compile takes 18.13 s in total
+vllm-1  | [1;36m(EngineCore_DP0 pid=126)[0;0m [rank0]:W1005 01:55:52.092000 126 torch/utils/cpp_extension.py:2425] TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+vllm-1  | [1;36m(EngineCore_DP0 pid=126)[0;0m [rank0]:W1005 01:55:52.092000 126 torch/utils/cpp_extension.py:2425] If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'] to specific architectures.
+vllm-1  | [1;36m(EngineCore_DP0 pid=126)[0;0m [rank0]:W1005 01:55:52.094000 126 torch/utils/cpp_extension.py:2425] TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+vllm-1  | [1;36m(EngineCore_DP0 pid=126)[0;0m [rank0]:W1005 01:55:52.094000 126 torch/utils/cpp_extension.py:2425] If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'] to specific architectures.
+vllm-1  | [1;36m(EngineCore_DP0 pid=126)[0;0m INFO 10-05 01:55:52 [gpu_worker.py:298] Available KV cache memory: 3.34 GiB
+vllm-1  | [1;36m(EngineCore_DP0 pid=126)[0;0m INFO 10-05 01:55:52 [kv_cache_utils.py:864] GPU KV cache size: 62,624 tokens
+vllm-1  | [1;36m(EngineCore_DP0 pid=126)[0;0m INFO 10-05 01:55:52 [kv_cache_utils.py:868] Maximum concurrency for 4,096 tokens per request: 15.29x
+vllm-1  | [1;36m(EngineCore_DP0 pid=126)[0;0m 
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):   0%|          | 0/4 [00:00<?, ?it/s]
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  25%|██▌       | 1/4 [00:00<00:00,  6.15it/s]
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  50%|█████     | 2/4 [00:00<00:00,  5.48it/s]
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  75%|███████▌  | 3/4 [00:00<00:00,  5.64it/s]
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE): 100%|██████████| 4/4 [00:00<00:00,  5.78it/s]
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE): 100%|██████████| 4/4 [00:00<00:00,  5.74it/s]
+vllm-1  | [1;36m(EngineCore_DP0 pid=126)[0;0m INFO 10-05 01:55:54 [gpu_model_runner.py:3118] Graph capturing finished in 1 secs, took 0.32 GiB
+vllm-1  | [1;36m(EngineCore_DP0 pid=126)[0;0m INFO 10-05 01:55:54 [gpu_worker.py:391] Free memory on device (10.8/11.99 GiB) on startup. Desired GPU memory utilization is (0.8, 9.59 GiB). Actual usage is 5.2 GiB for weight, 1.03 GiB for peak activation, 0.02 GiB for non-torch memory, and 0.32 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=3091833651` to fit into requested memory, or `--kv-cache-memory=4390809600` to fully utilize gpu memory. Current kv cache memory in use is 3591283507 bytes.
+vllm-1  | [1;36m(EngineCore_DP0 pid=126)[0;0m INFO 10-05 01:55:54 [core.py:218] init engine (profile, create kv cache, warmup model) took 22.18 seconds
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:55:54 [loggers.py:142] Engine 000: vllm cache_config_info with initialization after num_gpu_blocks is: 3914
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:55:54 [async_llm.py:180] Torch profiler disabled. AsyncLLM CPU traces will not be collected.
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:55:54 [api_server.py:1692] Supported_tasks: ['generate']
+vllm-1  | [1;36m(APIServer pid=1)[0;0m WARNING 10-05 01:55:54 [__init__.py:1695] Default sampling parameters have been overridden by the model's Hugging Face generation config recommended from the model creator. If this is not intended, please relaunch vLLM instance with `--generation-config vllm`.
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:55:54 [serving_responses.py:130] Using default chat sampling params from model: {'repetition_penalty': 1.05, 'temperature': 0.7, 'top_k': 20, 'top_p': 0.8}
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:55:54 [serving_chat.py:137] Using default chat sampling params from model: {'repetition_penalty': 1.05, 'temperature': 0.7, 'top_k': 20, 'top_p': 0.8}
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:55:54 [serving_completion.py:76] Using default completion sampling params from model: {'repetition_penalty': 1.05, 'temperature': 0.7, 'top_k': 20, 'top_p': 0.8}
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:55:54 [api_server.py:1971] Starting vLLM API server 0 on http://0.0.0.0:8000
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:55:54 [launcher.py:36] Available routes are:
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:55:54 [launcher.py:44] Route: /openapi.json, Methods: GET, HEAD
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:55:54 [launcher.py:44] Route: /docs, Methods: GET, HEAD
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:55:54 [launcher.py:44] Route: /docs/oauth2-redirect, Methods: GET, HEAD
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:55:54 [launcher.py:44] Route: /redoc, Methods: GET, HEAD
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:55:54 [launcher.py:44] Route: /health, Methods: GET
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:55:54 [launcher.py:44] Route: /load, Methods: GET
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:55:54 [launcher.py:44] Route: /ping, Methods: POST
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:55:54 [launcher.py:44] Route: /ping, Methods: GET
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:55:54 [launcher.py:44] Route: /tokenize, Methods: POST
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:55:54 [launcher.py:44] Route: /detokenize, Methods: POST
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:55:54 [launcher.py:44] Route: /v1/models, Methods: GET
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:55:54 [launcher.py:44] Route: /version, Methods: GET
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:55:54 [launcher.py:44] Route: /v1/responses, Methods: POST
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:55:54 [launcher.py:44] Route: /v1/responses/{response_id}, Methods: GET
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:55:54 [launcher.py:44] Route: /v1/responses/{response_id}/cancel, Methods: POST
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:55:54 [launcher.py:44] Route: /v1/chat/completions, Methods: POST
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:55:54 [launcher.py:44] Route: /v1/completions, Methods: POST
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:55:54 [launcher.py:44] Route: /v1/embeddings, Methods: POST
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:55:54 [launcher.py:44] Route: /pooling, Methods: POST
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:55:54 [launcher.py:44] Route: /classify, Methods: POST
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:55:54 [launcher.py:44] Route: /score, Methods: POST
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:55:54 [launcher.py:44] Route: /v1/score, Methods: POST
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:55:54 [launcher.py:44] Route: /v1/audio/transcriptions, Methods: POST
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:55:54 [launcher.py:44] Route: /v1/audio/translations, Methods: POST
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:55:54 [launcher.py:44] Route: /rerank, Methods: POST
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:55:54 [launcher.py:44] Route: /v1/rerank, Methods: POST
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:55:54 [launcher.py:44] Route: /v2/rerank, Methods: POST
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:55:54 [launcher.py:44] Route: /scale_elastic_ep, Methods: POST
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:55:54 [launcher.py:44] Route: /is_scaling_elastic_ep, Methods: POST
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:55:54 [launcher.py:44] Route: /invocations, Methods: POST
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:55:54 [launcher.py:44] Route: /metrics, Methods: GET
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO:     Started server process [1]
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO:     Waiting for application startup.
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO:     Application startup complete.
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO:     172.20.0.6:34890 - "GET /metrics HTTP/1.1" 200 OK
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO:     172.20.0.9:51824 - "GET /health HTTP/1.1" 200 OK
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO:     172.20.0.6:54878 - "GET /metrics HTTP/1.1" 200 OK
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO:     172.20.0.6:47076 - "GET /metrics HTTP/1.1" 200 OK
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:56:52 [chat_utils.py:538] Detected the chat template content format to be 'string'. You can set `--chat-template-content-format` to override this.
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO:     172.20.0.6:46956 - "GET /metrics HTTP/1.1" 200 OK
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:56:55 [loggers.py:123] Engine 000: Avg prompt throughput: 47.4 tokens/s, Avg generation throughput: 1.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.8%, Prefix cache hit rate: 0.0%
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO:     172.20.0.9:42980 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:57:05 [loggers.py:123] Engine 000: Avg prompt throughput: 37.7 tokens/s, Avg generation throughput: 9.0 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.6%, Prefix cache hit rate: 16.9%
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO:     172.20.0.6:56694 - "GET /metrics HTTP/1.1" 200 OK
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO:     172.20.0.9:40908 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:57:15 [loggers.py:123] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 8.8 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 16.9%
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO:     172.20.0.6:52194 - "GET /metrics HTTP/1.1" 200 OK
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:57:25 [loggers.py:123] Engine 000: Avg prompt throughput: 150.8 tokens/s, Avg generation throughput: 3.7 tokens/s, Running: 4 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.8%, Prefix cache hit rate: 68.5%
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO:     172.20.0.9:51532 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO:     172.20.0.9:51546 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO:     172.20.0.9:51558 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO:     172.20.0.9:51564 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:57:35 [loggers.py:123] Engine 000: Avg prompt throughput: 37.7 tokens/s, Avg generation throughput: 34.5 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.6%, Prefix cache hit rate: 72.5%
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO:     172.20.0.6:53530 - "GET /metrics HTTP/1.1" 200 OK
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:57:45 [loggers.py:123] Engine 000: Avg prompt throughput: 113.1 tokens/s, Avg generation throughput: 36.1 tokens/s, Running: 4 reqs, Waiting: 0 reqs, GPU KV cache usage: 1.3%, Prefix cache hit rate: 79.9%
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO:     172.20.0.9:54194 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO:     172.20.0.9:54202 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO:     172.20.0.9:54210 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO:     172.20.0.9:54212 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO:     172.20.0.6:46658 - "GET /metrics HTTP/1.1" 200 OK
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:57:55 [loggers.py:123] Engine 000: Avg prompt throughput: 150.8 tokens/s, Avg generation throughput: 34.6 tokens/s, Running: 4 reqs, Waiting: 0 reqs, GPU KV cache usage: 1.2%, Prefix cache hit rate: 84.8%
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO:     172.20.0.9:54668 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO:     172.20.0.9:45078 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO:     172.20.0.9:45094 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO:     172.20.0.9:45102 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:58:05 [loggers.py:123] Engine 000: Avg prompt throughput: 150.8 tokens/s, Avg generation throughput: 34.6 tokens/s, Running: 4 reqs, Waiting: 0 reqs, GPU KV cache usage: 1.1%, Prefix cache hit rate: 87.6%
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO:     172.20.0.9:42562 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO:     172.20.0.9:42566 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO:     172.20.0.9:42572 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO:     172.20.0.9:42578 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO:     172.20.0.6:60830 - "GET /metrics HTTP/1.1" 200 OK
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:58:15 [loggers.py:123] Engine 000: Avg prompt throughput: 150.8 tokens/s, Avg generation throughput: 34.6 tokens/s, Running: 4 reqs, Waiting: 0 reqs, GPU KV cache usage: 1.1%, Prefix cache hit rate: 89.4%
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO:     172.20.0.9:58322 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO:     172.20.0.9:58332 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO:     172.20.0.9:58340 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO:     172.20.0.9:58354 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO:     172.20.0.6:50494 - "GET /metrics HTTP/1.1" 200 OK
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:58:25 [loggers.py:123] Engine 000: Avg prompt throughput: 150.8 tokens/s, Avg generation throughput: 33.8 tokens/s, Running: 4 reqs, Waiting: 0 reqs, GPU KV cache usage: 1.0%, Prefix cache hit rate: 90.7%
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO:     172.20.0.9:39208 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO:     172.20.0.9:39218 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO:     172.20.0.9:39226 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO:     172.20.0.9:39230 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:58:35 [loggers.py:123] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 16.1 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 90.7%
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO:     172.20.0.6:60734 - "GET /metrics HTTP/1.1" 200 OK
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO 10-05 01:58:45 [loggers.py:123] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 90.7%
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO:     172.20.0.6:60942 - "GET /metrics HTTP/1.1" 200 OK
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO:     172.20.0.6:51162 - "GET /metrics HTTP/1.1" 200 OK
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO:     172.20.0.6:53618 - "GET /metrics HTTP/1.1" 200 OK
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO:     172.20.0.6:39466 - "GET /metrics HTTP/1.1" 200 OK
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO:     172.20.0.6:38422 - "GET /metrics HTTP/1.1" 200 OK
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO:     172.20.0.6:51050 - "GET /metrics HTTP/1.1" 200 OK
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO:     172.20.0.6:45688 - "GET /metrics HTTP/1.1" 200 OK
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO:     172.20.0.6:57100 - "GET /metrics HTTP/1.1" 200 OK
+vllm-1  | [1;36m(APIServer pid=1)[0;0m INFO:     172.20.0.6:54272 - "GET /metrics HTTP/1.1" 200 OK

@@ -1,0 +1,7 @@
+{
+  "image_id": "sha256:876185015815686554dcf4d223d674ec571433d27e6281792b952c1af6ae203e",
+  "timestamp": 1792506195.7975788,
+  "server_profiling": false,
+  "measurement": "same measure_http and original workload; direct docker exec",
+  "host_gpu_csv": "NOT CAPTURED for direct invocation; real vLLM counters retained"
+}

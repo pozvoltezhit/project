@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "timestamp": 1792501522.4144723,
+  "namespace": "course-final-20261020",
+  "containers_stopped": 8,
+  "original_container_ids_and_exited_states_unchanged": true,
+  "portal_qdrant": "Untouched; same ID and exited state as before",
+  "retained": "New image, private synthetic fixture and new test volumes; no deletion of user assets"
+}

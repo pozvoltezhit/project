@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-20T12:35:12.936006+00:00",
+  "checks": "PASS: HTTP RBAC/tenant/session/injection, scanned PDF OCR, Qdrant ACL, Neo4j mirror, Jaeger spans, Prometheus, blocked backend egress",
+  "generation_mode": "extractive-invalid-generation",
+  "neo4j_nodes": 10,
+  "neo4j_edges": 3,
+  "trace_operations": [
+    "GET /graph",
+    "POST /query",
+    "agent.expand",
+    "agent.guard",
+    "agent.plan",
+    "agent.rerank",
+    "agent.retrieve",
+    "fastapi.dependencies",
+    "fastapi.endpoint",
+    "fastapi.serialization",
+    "query",
+    "query.finalize"
+  ],
+  "user_b_evidence": [
+    {
+      "chunk_id": "69e9fabcb769bad6206cd605",
+      "quote": "Синтетический учебный документ. Реальные производственные данные не использованы.\nКонтур К-2 контролируется датчиком Д-8. Датчик Д-8 подаёт сигнал при температуре выше 80 градусов.\nДатчик Д-8 проверяют перед запуском контура К-2.",
+      "title": "02-control.txt",
+      "page": 1,
+      "version": 1,
+      "start": 0,
+      "end": 229,
+      "selection_start": 0,
+      "selection_end": 229
+    },
+    {
+      "chunk_id": "c35099df26cf6924defe003d",
+      "quote": "Синтетический учебный документ. Реальные производственные данные не использованы.\nНасос Н-17 подключен к контуру К-2. Рабочее давление насоса Н-17 не должно превышать 6 бар.\nОтключение насоса Н-17 перед техническим обслуживанием обязательно.",
+      "title": "01-equipment.txt",
+      "page": 1,
+      "version": 1,
+      "start": 0,
+      "end": 241,
+      "selection_start": 0,
+      "selection_end": 241
+    }
+  ],
+  "ocr_text": "Учебный технический регламент\n\nНасос Н-17 подключен к контуру К-2.\nКонтур К-2 контролируется датчиком Д-8.\nРежим: 100 оборотов в минуту.\n\nСинтетический документ для проверки ОСК.\n",
+  "bundle_hash": "8e3e74e7f989c83ff6f74b523f4e422cc2fada83e218fc27dfab11a4dfebf03c",
+  "timestamp": 1792499712.9757829
+}

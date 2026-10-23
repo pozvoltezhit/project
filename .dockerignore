@@ -1,0 +1,14 @@
+data/
+models/*
+!models/qwen-manifest.json
+docs/
+tests/
+tools/
+.coverage
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+.git/
+**/__pycache__/
+*.zip

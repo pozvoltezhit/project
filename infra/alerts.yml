@@ -1,0 +1,42 @@
+groups:
+  - name: knowledge-runtime
+    rules:
+      - alert: KnowledgeAPIUnavailable
+        expr: up{job="knowledge"} == 0
+        for: 1m
+        labels: {severity: critical}
+        annotations: {summary: "API scrape failed", runbook: "docs/remediation/RUNBOOK.md#dependencies"}
+      - alert: KnowledgeDependencyUnavailable
+        expr: knowledge_dependency_ready{dependency=~"indices|qdrant|neo4j|vllm|model_config"} == 0
+        for: 30s
+        labels: {severity: critical}
+        annotations: {summary: "Required dependency not ready", runbook: "docs/remediation/RUNBOOK.md#dependencies"}
+      - alert: KnowledgeHTTPErrorRate
+        expr: sum(rate(knowledge_http_requests_total{route=~"/query.*",status_class="5xx"}[5m])) / (sum(rate(knowledge_http_requests_total{route=~"/query.*"}[5m])) > 0) > 0.05 and sum(increase(knowledge_http_requests_total{route=~"/query.*"}[5m])) >= 100
+        for: 2m
+        labels: {severity: warning}
+        annotations: {summary: "Query HTTP 5xx exceeds provisional 5%", runbook: "docs/remediation/RUNBOOK.md#errors"}
+      - alert: KnowledgeLatency
+        expr: histogram_quantile(0.95,sum by(le)(rate(knowledge_http_latency_seconds_bucket{route=~"/query.*"}[5m]))) > 5 and sum(increase(knowledge_http_requests_total{route=~"/query.*"}[5m])) >= 100
+        for: 2m
+        labels: {severity: warning}
+        annotations: {summary: "Query p95 exceeds provisional five seconds", runbook: "docs/remediation/RUNBOOK.md#latency"}
+      - alert: KnowledgeBudgetRejections
+        expr: increase(knowledge_budget_rejections_total[5m]) > 0
+        labels: {severity: warning}
+        annotations: {summary: "Oversized questions rejected safely; inspect workload and budget", runbook: "docs/remediation/RUNBOOK.md#budget"}
+      - alert: KnowledgeEvaluationInvalid
+        expr: knowledge_eval_valid == 0 or knowledge_eval_coverage < 1 or knowledge_eval_invalid > 0 or time() - knowledge_eval_last_completed_timestamp_seconds > 86400
+        for: 1m
+        labels: {severity: warning}
+        annotations: {summary: "Evaluation must HOLD release", runbook: "docs/remediation/RUNBOOK.md#evaluation"}
+      - alert: KnowledgeEvaluationMissing
+        expr: absent(knowledge_eval_valid)
+        for: 5m
+        labels: {severity: warning}
+        annotations: {summary: "No complete evaluation telemetry", runbook: "docs/remediation/RUNBOOK.md#evaluation"}
+      - alert: KnowledgeTelemetryMissing
+        expr: absent(knowledge_ready) or absent(up{job="knowledge"})
+        for: 2m
+        labels: {severity: critical}
+        annotations: {summary: "Readiness or scrape telemetry missing", runbook: "docs/remediation/RUNBOOK.md#telemetry"}

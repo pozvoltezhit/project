@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "scope": "Python dependency install from verified wheels into fresh Linux/Python3.12 venv without network",
+  "limitations": "OS image and OCR packages supplied by prepared staging image; not a fresh offline apt/base-image build",
+  "wheel_count": 66,
+  "lock_sha256": "c119cef415f8317bfc8083a9844507c1a14f415943b6cb627aa840d6692a14ed"
+}

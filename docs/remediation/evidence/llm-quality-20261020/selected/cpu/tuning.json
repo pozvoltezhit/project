@@ -1,0 +1,164 @@
+{
+  "dataset_hash": "fdedcb94301588459ef1762f0fd00660a3cd5dc50545e7db45ca0e89d5f5847b",
+  "dataset_version": "golden-v1-synthetic-tuning",
+  "synthetic": true,
+  "timestamp": 1792506578.2543955,
+  "bundle_hash": "96d03e4d965d0b1a694da71b2f7f4093c5d9c9594abe8e25a56227d869934f51",
+  "prompt_version": "evidence-select-v4",
+  "prompt_sha256": "42963af258248fe92abb2ff4be73fbcb17a042c52f4d486a9c280d7512175a4a",
+  "cases": [
+    {
+      "id": "tune-pressure",
+      "category": "original_tuning",
+      "query": "Какое давление Н-17?",
+      "status": "PASS",
+      "actual": "answered",
+      "mode": "extractive",
+      "usage": {
+        "mode": "extractive",
+        "input_tokens": 0,
+        "output_tokens": 0
+      },
+      "llm_calls": 0,
+      "returned_sources": [
+        "equipment"
+      ],
+      "facts_covered": true,
+      "citation_valid": true,
+      "token_budget_ok": true,
+      "grounding_rejections": [],
+      "evidence": [
+        {
+          "chunk_id": "55e1e6d7030d5a5d820bccbf",
+          "quote": "Насос Н-17 подключен к контуру К-2. Рабочее давление Н-17 не должно превышать 6 бар.",
+          "start": 0,
+          "end": 84,
+          "selection_start": 0,
+          "selection_end": 84,
+          "title": "equipment",
+          "page": 1,
+          "version": 1
+        }
+      ],
+      "raw_qwen_responses": [],
+      "latency_ms": 13.222
+    },
+    {
+      "id": "tune-empty",
+      "category": "no_evidence",
+      "query": "Неизвестный И-999",
+      "status": "PASS",
+      "actual": "no_evidence",
+      "mode": "extractive",
+      "usage": {
+        "mode": "extractive",
+        "input_tokens": 0,
+        "output_tokens": 0
+      },
+      "llm_calls": 0,
+      "returned_sources": [],
+      "facts_covered": true,
+      "citation_valid": true,
+      "token_budget_ok": true,
+      "grounding_rejections": [],
+      "evidence": [],
+      "raw_qwen_responses": [],
+      "latency_ms": 12.002
+    },
+    {
+      "id": "tune-denial",
+      "category": "no_evidence",
+      "query": "Можно ли узнать бюджет проекта П-9?",
+      "status": "PASS",
+      "actual": "no_evidence",
+      "mode": "extractive",
+      "usage": {
+        "mode": "extractive",
+        "input_tokens": 0,
+        "output_tokens": 0
+      },
+      "llm_calls": 0,
+      "returned_sources": [],
+      "facts_covered": true,
+      "citation_valid": true,
+      "token_budget_ok": true,
+      "grounding_rejections": [],
+      "evidence": [],
+      "raw_qwen_responses": [],
+      "latency_ms": 11.544
+    },
+    {
+      "id": "tune-negation",
+      "category": "original_tuning",
+      "query": "Какие запреты для Н-99?",
+      "status": "PASS",
+      "actual": "answered",
+      "mode": "extractive",
+      "usage": {
+        "mode": "extractive",
+        "input_tokens": 0,
+        "output_tokens": 0
+      },
+      "llm_calls": 0,
+      "returned_sources": [
+        "negation"
+      ],
+      "facts_covered": true,
+      "citation_valid": true,
+      "token_budget_ok": true,
+      "grounding_rejections": [],
+      "evidence": [
+        {
+          "chunk_id": "39f6a2e4442ee5ab9c050384",
+          "quote": "Работа насоса Н-99 не разрешена. Запуск допускается только после осмотра, кроме режима А-7.",
+          "start": 0,
+          "end": 91,
+          "selection_start": 0,
+          "selection_end": 91,
+          "title": "negation",
+          "page": 1,
+          "version": 1
+        }
+      ],
+      "raw_qwen_responses": [],
+      "latency_ms": 10.979
+    }
+  ],
+  "limitations": [
+    "Author-generated annotations, not independent domain expert evaluation",
+    "No OCR cases in original tuning split",
+    "No proof of absence of overfitting or arbitrary semantic entailment"
+  ],
+  "expected": 4,
+  "completed": 4,
+  "failures": 0,
+  "modes": {
+    "extractive": 4
+  },
+  "grounding_rejections": {},
+  "llm_calls": 0,
+  "quality": {
+    "direct_valid_llm_answers": 0,
+    "answerable_non_conflict_cases": 2,
+    "direct_valid_llm_answer_rate": 0.0,
+    "correct_fallbacks": 4,
+    "invalid_generation_fallbacks": 0,
+    "valid_llm_abstentions": 0,
+    "unreliable_answers_or_errors": 0,
+    "citation_correctness": 1,
+    "extractive_source_faithfulness_proxy": 1,
+    "annotated_answer_relevancy_proxy": 1.0,
+    "calibrated_llm_judge_faithfulness": null,
+    "calibrated_llm_judge_answer_relevancy": null
+  },
+  "latency_ms": {
+    "p50": 12.001996999970288,
+    "p95": 13.222287999724358,
+    "p99": 13.222287999724358
+  },
+  "tokens": {
+    "input_tokens": 0,
+    "output_tokens": 0
+  },
+  "decision": "PASS"
+}

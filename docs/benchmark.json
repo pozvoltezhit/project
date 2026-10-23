@@ -1,0 +1,13 @@
+{
+  "scope": "in-process ASGI, SQLite graph, hashed lexical retrieval, extractive response; NO GPU/LLM and NO network",
+  "system": "Windows-11-10.0.28000-SP0",
+  "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+  "requests": 300,
+  "concurrency": 8,
+  "elapsed_seconds": 5.148,
+  "successful_rps": 58.27,
+  "errors": 0,
+  "p50_ms": 129.24,
+  "p95_ms": 163.73,
+  "p99_ms": 347.84
+}

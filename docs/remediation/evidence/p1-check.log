@@ -1,0 +1,1 @@
+PASS: GraphRAG two-hop provenance, tenant/RBAC, session ownership, revocation, poison, PII, grounded output, HTTP/SSE, malformed bearer/model output/token usage

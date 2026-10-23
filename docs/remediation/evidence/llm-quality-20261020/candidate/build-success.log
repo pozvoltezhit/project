@@ -1,0 +1,56 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile.offline
+#1 transferring dockerfile: 929B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/course-knowledge-audit:20261020
+#2 DONE 0.1s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 190B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 18.91kB done
+#4 DONE 0.0s
+
+#5 [1/8] FROM docker.io/library/course-knowledge-audit:20261020@sha256:185bfd1525b668d3483118d9203e2d80e4e502f14174a6b9b48fcb7ebb5227d1
+#5 resolve docker.io/library/course-knowledge-audit:20261020@sha256:185bfd1525b668d3483118d9203e2d80e4e502f14174a6b9b48fcb7ebb5227d1 0.0s done
+#5 DONE 0.0s
+
+#6 [2/8] COPY requirements-lock.txt /tmp/expected-requirements-lock.txt
+#6 CACHED
+
+#7 [3/8] RUN python -c "import hashlib,importlib.metadata,pathlib; expected=pathlib.Path('/tmp/expected-requirements-lock.txt'); assert hashlib.sha256(expected.read_bytes()).digest()==hashlib.sha256(pathlib.Path('/app/requirements-lock.txt').read_bytes()).digest(); pins=[line.split('==') for line in expected.read_text().splitlines() if '==' in line]; assert all(importlib.metadata.version(name)==version for name,version in pins)"
+#7 CACHED
+
+#8 [4/8] COPY backend backend
+#8 DONE 0.1s
+
+#9 [5/8] COPY frontend frontend
+#9 DONE 0.1s
+
+#10 [6/8] COPY examples examples
+#10 DONE 0.1s
+
+#11 [7/8] COPY eval eval
+#11 DONE 0.1s
+
+#12 [8/8] COPY models/qwen-manifest.json models/qwen-manifest.json
+#12 DONE 0.1s
+
+#13 exporting to image
+#13 exporting layers
+#13 exporting layers 0.5s done
+#13 exporting manifest sha256:4ff9a827256828218b304b5461d6d8023c424bf622e5000dc161cbe1174b98b8 0.0s done
+#13 exporting config sha256:d35f0d8b5ffee5f906d5d08790fd28491c8e224d88bea97b62dda7a33b8c4828 0.0s done
+#13 exporting attestation manifest sha256:f1998d88541ef80500e4602f4358f7ffbdb6b39c431c8ee2309a2373c63cce68 0.0s done
+#13 exporting manifest list sha256:6a18883618782a868ee68a69bd1c10351e5a0e3aa70814a9f75be83361fd1f13 0.0s done
+#13 naming to docker.io/library/course-knowledge-quality:20261020
+#13 naming to docker.io/library/course-knowledge-quality:20261020 done
+#13 unpacking to docker.io/library/course-knowledge-quality:20261020 0.1s done
+#13 DONE 0.7s
+WARNING: current commit information was not captured by the build: failed to read current commit information with git rev-parse --is-inside-work-tree
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/mnrq48e56gdkkkkkihqimw0eu

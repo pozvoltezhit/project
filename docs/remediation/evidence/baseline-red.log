@@ -1,0 +1,67 @@
+test_F01_after_validate_original_audit_hook (tests.test_remediation.SecurityRegression.test_F01_after_validate_original_audit_hook) ... FAIL
+test_F01_concurrent_writer_before_finalization (tests.test_remediation.SecurityRegression.test_F01_concurrent_writer_before_finalization) ... FAIL
+test_F01_during_generation (tests.test_remediation.SecurityRegression.test_F01_during_generation) ... ok
+test_F02_token_budget_is_enforced (tests.test_remediation.SecurityRegression.test_F02_token_budget_is_enforced) ... ERROR
+test_F03_clipped_negation (tests.test_remediation.SecurityRegression.test_F03_clipped_negation) ... FAIL
+test_F04_single_entity_neighbor (tests.test_remediation.SecurityRegression.test_F04_single_entity_neighbor) ... FAIL
+test_F05_rejected_http_requests_counted_once (tests.test_remediation.SecurityRegression.test_F05_rejected_http_requests_counted_once) ... ERROR
+
+======================================================================
+ERROR: test_F02_token_budget_is_enforced (tests.test_remediation.SecurityRegression.test_F02_token_budget_is_enforced)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/app/tests/test_remediation.py", line 76, in test_F02_token_budget_is_enforced
+    from backend.budget import BudgetExceeded, TokenBudget
+ModuleNotFoundError: No module named 'backend.budget'
+
+======================================================================
+ERROR: test_F05_rejected_http_requests_counted_once (tests.test_remediation.SecurityRegression.test_F05_rejected_http_requests_counted_once)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/app/tests/test_remediation.py", line 110, in test_F05_rejected_http_requests_counted_once
+    before = count()
+             ^^^^^^^
+  File "/app/tests/test_remediation.py", line 107, in count
+    return sum(s.value for m in api.http_requests.collect() for s in m.samples if s.name=='knowledge_http_requests_total' and s.labels.get('route')=='/query')
+                                ^^^^^^^^^^^^^^^^^
+AttributeError: module 'backend.api' has no attribute 'http_requests'
+
+======================================================================
+FAIL: test_F01_after_validate_original_audit_hook (tests.test_remediation.SecurityRegression.test_F01_after_validate_original_audit_hook)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/app/tests/test_remediation.py", line 31, in test_F01_after_validate_original_audit_hook
+    self.assertNotIn('246813579', json.dumps(result))
+AssertionError: '246813579' unexpectedly found in '{"request_id": "dcaff2e5-097b-4ab3-911f-e2b38a54ec1b", "session_id": "9e7519f8-e4be-4243-ac1b-d4ebadf20543", "status": "answered", "evidence": [{"chunk_id": "6bef74fbd05ebf545f6c0caf", "quote": "\\u041d\\u0430\\u0441\\u043e\\u0441 \\u041d-17: \\u043a\\u043e\\u043d\\u0442\\u0440\\u043e\\u043b\\u044c\\u043d\\u043e\\u0435 \\u0437\\u043d\\u0430\\u0447\\u0435\\u043d\\u0438\\u0435 246813579.", "title": "secret", "page": 1, "version": 1}], "graph": [], "usage": {"mode": "extractive", "input_tokens": 0, "output_tokens": 0}, "stages": ["guard", "plan", "retrieve", "expand", "rerank", "generate", "validate"]}'
+
+======================================================================
+FAIL: test_F01_concurrent_writer_before_finalization (tests.test_remediation.SecurityRegression.test_F01_concurrent_writer_before_finalization)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/app/tests/test_remediation.py", line 73, in test_F01_concurrent_writer_before_finalization
+    self.assertNotIn('246813579', json.dumps(results))
+AssertionError: '246813579' unexpectedly found in '[{"request_id": "42598959-b7ab-4ce2-9926-fc4e141c1db6", "session_id": "9dc67656-ba0e-4c78-8ede-1d255694c9db", "status": "answered", "evidence": [{"chunk_id": "6bef74fbd05ebf545f6c0caf", "quote": "\\u041d\\u0430\\u0441\\u043e\\u0441 \\u041d-17: \\u043a\\u043e\\u043d\\u0442\\u0440\\u043e\\u043b\\u044c\\u043d\\u043e\\u0435 \\u0437\\u043d\\u0430\\u0447\\u0435\\u043d\\u0438\\u0435 246813579.", "title": "secret", "page": 1, "version": 1}], "graph": [], "usage": {"mode": "extractive", "input_tokens": 0, "output_tokens": 0}, "stages": ["guard", "plan", "retrieve", "expand", "rerank", "generate", "validate"]}]'
+
+======================================================================
+FAIL: test_F03_clipped_negation (tests.test_remediation.SecurityRegression.test_F03_clipped_negation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/app/tests/test_remediation.py", line 92, in test_F03_clipped_negation
+    self.assertEqual(Agent(self.store, Clipped()).run('Н-99', self.p)['status'], 'output_blocked')
+AssertionError: 'answered' != 'output_blocked'
+- answered
++ output_blocked
+
+
+======================================================================
+FAIL: test_F04_single_entity_neighbor (tests.test_remediation.SecurityRegression.test_F04_single_entity_neighbor)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/app/tests/test_remediation.py", line 99, in test_F04_single_entity_neighbor
+    self.assertIn('single', {c['title'] for c in chunks})
+AssertionError: 'single' not found in {'link'}
+
+----------------------------------------------------------------------
+Ran 7 tests in 2.583s
+
+FAILED (failures=4, errors=2)

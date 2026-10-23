@@ -1,0 +1,16 @@
+{
+  "scope": "HTTP through loopback gateway to Docker backend; server profile recorded separately",
+  "generation_modes": [
+    "vllm"
+  ],
+  "system": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.41",
+  "processor": "",
+  "requests": 48,
+  "concurrency": 4,
+  "elapsed_seconds": 27.951,
+  "successful_rps": 1.72,
+  "errors": 0,
+  "p50_ms": 2221.2,
+  "p95_ms": 2797.43,
+  "p99_ms": 2896.21
+}

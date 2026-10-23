@@ -1,0 +1,1222 @@
+{
+  "dataset_hash": "60622bc4b3da49fae16cb0dba1cdef4ab4fd8c3c2f968137ed50dc07b59c6604",
+  "dataset_version": "llm-quality-holdout-v1",
+  "synthetic": true,
+  "timestamp": 1792505550.1240225,
+  "bundle_hash": "96d03e4d965d0b1a694da71b2f7f4093c5d9c9594abe8e25a56227d869934f51",
+  "prompt_version": "evidence-select-v4",
+  "prompt_sha256": "42963af258248fe92abb2ff4be73fbcb17a042c52f4d486a9c280d7512175a4a",
+  "cases": [
+    {
+      "id": "factual-0",
+      "category": "factual_units",
+      "query": "Укажи порог отключения Т-684.",
+      "status": "PASS",
+      "actual": "answered",
+      "mode": "vllm",
+      "usage": {
+        "mode": "vllm",
+        "input_tokens": 255,
+        "output_tokens": 12,
+        "budget_input_tokens": 255,
+        "max_model_len": 4096,
+        "reserved_output_tokens": 700,
+        "safety_margin": 64
+      },
+      "llm_calls": 1,
+      "returned_sources": [
+        "factual-0-0"
+      ],
+      "facts_covered": true,
+      "citation_valid": true,
+      "token_budget_ok": true,
+      "grounding_rejections": [],
+      "evidence": [
+        {
+          "chunk_id": "54ad2de5b78816638d9301af",
+          "quote": "Узел Т-684 отключают при достижении 118 °C.",
+          "start": 0,
+          "end": 43,
+          "selection_start": 0,
+          "selection_end": 43,
+          "title": "factual-0-0",
+          "page": 1,
+          "version": 1
+        }
+      ],
+      "raw_qwen_responses": [
+        {
+          "id": "chatcmpl-4e19f19adff04494bdf5f4c11697ecf4",
+          "object": "chat.completion",
+          "created": 1792505550,
+          "model": "qwen-local",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"evidence\":[{\"source_id\":\"S1\"}]}",
+                "refusal": null,
+                "annotations": null,
+                "audio": null,
+                "function_call": null,
+                "tool_calls": [],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": "stop",
+              "stop_reason": null,
+              "token_ids": null
+            }
+          ],
+          "service_tier": null,
+          "system_fingerprint": null,
+          "usage": {
+            "prompt_tokens": 255,
+            "total_tokens": 267,
+            "completion_tokens": 12,
+            "prompt_tokens_details": null
+          },
+          "prompt_logprobs": null,
+          "prompt_token_ids": null,
+          "kv_transfer_params": null
+        }
+      ],
+      "latency_ms": 386.153
+    },
+    {
+      "id": "factual-1",
+      "category": "factual_units",
+      "query": "Укажи порог отключения Т-545.",
+      "status": "PASS",
+      "actual": "answered",
+      "mode": "vllm",
+      "usage": {
+        "mode": "vllm",
+        "input_tokens": 255,
+        "output_tokens": 12,
+        "budget_input_tokens": 255,
+        "max_model_len": 4096,
+        "reserved_output_tokens": 700,
+        "safety_margin": 64
+      },
+      "llm_calls": 1,
+      "returned_sources": [
+        "factual-1-0"
+      ],
+      "facts_covered": true,
+      "citation_valid": true,
+      "token_budget_ok": true,
+      "grounding_rejections": [],
+      "evidence": [
+        {
+          "chunk_id": "7ff5e3fef1d56bd83e731cab",
+          "quote": "Узел Т-545 отключают при достижении 152 °C.",
+          "start": 0,
+          "end": 43,
+          "selection_start": 0,
+          "selection_end": 43,
+          "title": "factual-1-0",
+          "page": 1,
+          "version": 1
+        }
+      ],
+      "raw_qwen_responses": [
+        {
+          "id": "chatcmpl-e5d49944cab24d0694787f0225fe6778",
+          "object": "chat.completion",
+          "created": 1792505550,
+          "model": "qwen-local",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"evidence\":[{\"source_id\":\"S1\"}]}",
+                "refusal": null,
+                "annotations": null,
+                "audio": null,
+                "function_call": null,
+                "tool_calls": [],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": "stop",
+              "stop_reason": null,
+              "token_ids": null
+            }
+          ],
+          "service_tier": null,
+          "system_fingerprint": null,
+          "usage": {
+            "prompt_tokens": 255,
+            "total_tokens": 267,
+            "completion_tokens": 12,
+            "prompt_tokens_details": null
+          },
+          "prompt_logprobs": null,
+          "prompt_token_ids": null,
+          "kv_transfer_params": null
+        }
+      ],
+      "latency_ms": 169.531
+    },
+    {
+      "id": "pressure",
+      "category": "numbers",
+      "query": "Каково допустимое давление насоса Н-863?",
+      "status": "PASS",
+      "actual": "answered",
+      "mode": "vllm",
+      "usage": {
+        "mode": "vllm",
+        "input_tokens": 260,
+        "output_tokens": 12,
+        "budget_input_tokens": 260,
+        "max_model_len": 4096,
+        "reserved_output_tokens": 700,
+        "safety_margin": 64
+      },
+      "llm_calls": 1,
+      "returned_sources": [
+        "pressure-0"
+      ],
+      "facts_covered": true,
+      "citation_valid": true,
+      "token_budget_ok": true,
+      "grounding_rejections": [],
+      "evidence": [
+        {
+          "chunk_id": "15715d7b27484a7b217f5b67",
+          "quote": "Давление насоса Н-863 не должно превышать 8 бар.",
+          "start": 0,
+          "end": 48,
+          "selection_start": 0,
+          "selection_end": 48,
+          "title": "pressure-0",
+          "page": 1,
+          "version": 1
+        }
+      ],
+      "raw_qwen_responses": [
+        {
+          "id": "chatcmpl-0fa99151c9d44c38aaf26305dfccb8bd",
+          "object": "chat.completion",
+          "created": 1792505550,
+          "model": "qwen-local",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"evidence\":[{\"source_id\":\"S1\"}]}",
+                "refusal": null,
+                "annotations": null,
+                "audio": null,
+                "function_call": null,
+                "tool_calls": [],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": "stop",
+              "stop_reason": null,
+              "token_ids": null
+            }
+          ],
+          "service_tier": null,
+          "system_fingerprint": null,
+          "usage": {
+            "prompt_tokens": 260,
+            "total_tokens": 272,
+            "completion_tokens": 12,
+            "prompt_tokens_details": null
+          },
+          "prompt_logprobs": null,
+          "prompt_token_ids": null,
+          "kv_transfer_params": null
+        }
+      ],
+      "latency_ms": 171.191
+    },
+    {
+      "id": "negation",
+      "category": "negation",
+      "query": "Разрешена ли работа П-534?",
+      "status": "PASS",
+      "actual": "answered",
+      "mode": "vllm",
+      "usage": {
+        "mode": "vllm",
+        "input_tokens": 251,
+        "output_tokens": 12,
+        "budget_input_tokens": 251,
+        "max_model_len": 4096,
+        "reserved_output_tokens": 700,
+        "safety_margin": 64
+      },
+      "llm_calls": 1,
+      "returned_sources": [
+        "negation-0"
+      ],
+      "facts_covered": true,
+      "citation_valid": true,
+      "token_budget_ok": true,
+      "grounding_rejections": [],
+      "evidence": [
+        {
+          "chunk_id": "e962f0e70316164e5455d762",
+          "quote": "Работа агрегата П-534 не разрешена.",
+          "start": 0,
+          "end": 35,
+          "selection_start": 0,
+          "selection_end": 35,
+          "title": "negation-0",
+          "page": 1,
+          "version": 1
+        }
+      ],
+      "raw_qwen_responses": [
+        {
+          "id": "chatcmpl-a91fcbc4f1df478da32945125436a124",
+          "object": "chat.completion",
+          "created": 1792505550,
+          "model": "qwen-local",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"evidence\":[{\"source_id\":\"S1\"}]}",
+                "refusal": null,
+                "annotations": null,
+                "audio": null,
+                "function_call": null,
+                "tool_calls": [],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": "stop",
+              "stop_reason": null,
+              "token_ids": null
+            }
+          ],
+          "service_tier": null,
+          "system_fingerprint": null,
+          "usage": {
+            "prompt_tokens": 251,
+            "total_tokens": 263,
+            "completion_tokens": 12,
+            "prompt_tokens_details": null
+          },
+          "prompt_logprobs": null,
+          "prompt_token_ids": null,
+          "kv_transfer_params": null
+        }
+      ],
+      "latency_ms": 174.416
+    },
+    {
+      "id": "condition",
+      "category": "condition",
+      "query": "Когда допускается запуск А-444?",
+      "status": "PASS",
+      "actual": "answered",
+      "mode": "vllm",
+      "usage": {
+        "mode": "vllm",
+        "input_tokens": 282,
+        "output_tokens": 12,
+        "budget_input_tokens": 282,
+        "max_model_len": 4096,
+        "reserved_output_tokens": 700,
+        "safety_margin": 64
+      },
+      "llm_calls": 1,
+      "returned_sources": [
+        "condition-0"
+      ],
+      "facts_covered": true,
+      "citation_valid": true,
+      "token_budget_ok": true,
+      "grounding_rejections": [],
+      "evidence": [
+        {
+          "chunk_id": "ed03e42c2071ec171b9bff49",
+          "quote": "Запуск узла А-444 допускается только при исправном датчике Д-736. При отказе датчика запуск запрещён.",
+          "start": 0,
+          "end": 101,
+          "selection_start": 0,
+          "selection_end": 101,
+          "title": "condition-0",
+          "page": 1,
+          "version": 1
+        }
+      ],
+      "raw_qwen_responses": [
+        {
+          "id": "chatcmpl-1f1bcb46539d42c2a32a589cf4f58d76",
+          "object": "chat.completion",
+          "created": 1792505551,
+          "model": "qwen-local",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"evidence\":[{\"source_id\":\"S1\"}]}",
+                "refusal": null,
+                "annotations": null,
+                "audio": null,
+                "function_call": null,
+                "tool_calls": [],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": "stop",
+              "stop_reason": null,
+              "token_ids": null
+            }
+          ],
+          "service_tier": null,
+          "system_fingerprint": null,
+          "usage": {
+            "prompt_tokens": 282,
+            "total_tokens": 294,
+            "completion_tokens": 12,
+            "prompt_tokens_details": null
+          },
+          "prompt_logprobs": null,
+          "prompt_token_ids": null,
+          "kv_transfer_params": null
+        }
+      ],
+      "latency_ms": 182.137
+    },
+    {
+      "id": "exception",
+      "category": "exception",
+      "query": "Опиши порядок обслуживания К-494 и исключение из него.",
+      "status": "PASS",
+      "actual": "answered",
+      "mode": "vllm",
+      "usage": {
+        "mode": "vllm",
+        "input_tokens": 277,
+        "output_tokens": 12,
+        "budget_input_tokens": 277,
+        "max_model_len": 4096,
+        "reserved_output_tokens": 700,
+        "safety_margin": 64
+      },
+      "llm_calls": 1,
+      "returned_sources": [
+        "exception-0"
+      ],
+      "facts_covered": true,
+      "citation_valid": true,
+      "token_budget_ok": true,
+      "grounding_rejections": [],
+      "evidence": [
+        {
+          "chunk_id": "66ea03700929faa17e7ac05e",
+          "quote": "Клапан К-494 закрывают перед обслуживанием. Исключение: продувка разрешается после согласования с диспетчером.",
+          "start": 0,
+          "end": 110,
+          "selection_start": 0,
+          "selection_end": 110,
+          "title": "exception-0",
+          "page": 1,
+          "version": 1
+        }
+      ],
+      "raw_qwen_responses": [
+        {
+          "id": "chatcmpl-632a19d8d6f445938a031ec3dc62dc56",
+          "object": "chat.completion",
+          "created": 1792505551,
+          "model": "qwen-local",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"evidence\":[{\"source_id\":\"S1\"}]}",
+                "refusal": null,
+                "annotations": null,
+                "audio": null,
+                "function_call": null,
+                "tool_calls": [],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": "stop",
+              "stop_reason": null,
+              "token_ids": null
+            }
+          ],
+          "service_tier": null,
+          "system_fingerprint": null,
+          "usage": {
+            "prompt_tokens": 277,
+            "total_tokens": 289,
+            "completion_tokens": 12,
+            "prompt_tokens_details": null
+          },
+          "prompt_logprobs": null,
+          "prompt_token_ids": null,
+          "kv_transfer_params": null
+        }
+      ],
+      "latency_ms": 177.358
+    },
+    {
+      "id": "bridge-0",
+      "category": "multi_hop",
+      "query": "Через какой контур Н-2805 связан с Д-8937?",
+      "status": "PASS",
+      "actual": "answered",
+      "mode": "vllm",
+      "usage": {
+        "mode": "vllm",
+        "input_tokens": 300,
+        "output_tokens": 18,
+        "budget_input_tokens": 300,
+        "max_model_len": 4096,
+        "reserved_output_tokens": 700,
+        "safety_margin": 64
+      },
+      "llm_calls": 1,
+      "returned_sources": [
+        "bridge-0-0",
+        "bridge-0-1"
+      ],
+      "facts_covered": true,
+      "citation_valid": true,
+      "token_budget_ok": true,
+      "grounding_rejections": [],
+      "evidence": [
+        {
+          "chunk_id": "493c745d9806fbd0f468e2ed",
+          "quote": "Контур К-1341 контролируется датчиком Д-8937.",
+          "start": 0,
+          "end": 45,
+          "selection_start": 0,
+          "selection_end": 45,
+          "title": "bridge-0-1",
+          "page": 1,
+          "version": 1
+        },
+        {
+          "chunk_id": "1ff35caf90dd252773ccc600",
+          "quote": "Насос Н-2805 подключён к контуру К-1341.",
+          "start": 0,
+          "end": 40,
+          "selection_start": 0,
+          "selection_end": 40,
+          "title": "bridge-0-0",
+          "page": 1,
+          "version": 1
+        }
+      ],
+      "raw_qwen_responses": [
+        {
+          "id": "chatcmpl-de16742303904628afa9e7bb1546d9fe",
+          "object": "chat.completion",
+          "created": 1792505551,
+          "model": "qwen-local",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"evidence\":[{\"source_id\":\"S1\"},{\"source_id\":\"S2\"}]}",
+                "refusal": null,
+                "annotations": null,
+                "audio": null,
+                "function_call": null,
+                "tool_calls": [],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": "stop",
+              "stop_reason": null,
+              "token_ids": null
+            }
+          ],
+          "service_tier": null,
+          "system_fingerprint": null,
+          "usage": {
+            "prompt_tokens": 300,
+            "total_tokens": 318,
+            "completion_tokens": 18,
+            "prompt_tokens_details": null
+          },
+          "prompt_logprobs": null,
+          "prompt_token_ids": null,
+          "kv_transfer_params": null
+        }
+      ],
+      "latency_ms": 259.388
+    },
+    {
+      "id": "bridge-1",
+      "category": "multi_hop",
+      "query": "Через какой контур Н-5163 связан с Д-5503?",
+      "status": "PASS",
+      "actual": "answered",
+      "mode": "vllm",
+      "usage": {
+        "mode": "vllm",
+        "input_tokens": 300,
+        "output_tokens": 18,
+        "budget_input_tokens": 300,
+        "max_model_len": 4096,
+        "reserved_output_tokens": 700,
+        "safety_margin": 64
+      },
+      "llm_calls": 1,
+      "returned_sources": [
+        "bridge-1-0",
+        "bridge-1-1"
+      ],
+      "facts_covered": true,
+      "citation_valid": true,
+      "token_budget_ok": true,
+      "grounding_rejections": [],
+      "evidence": [
+        {
+          "chunk_id": "f5f0295a5811d4d70a21c9d8",
+          "quote": "Контур К-4488 контролируется датчиком Д-5503.",
+          "start": 0,
+          "end": 45,
+          "selection_start": 0,
+          "selection_end": 45,
+          "title": "bridge-1-1",
+          "page": 1,
+          "version": 1
+        },
+        {
+          "chunk_id": "65f89485bcc4715a7257f82c",
+          "quote": "Насос Н-5163 подключён к контуру К-4488.",
+          "start": 0,
+          "end": 40,
+          "selection_start": 0,
+          "selection_end": 40,
+          "title": "bridge-1-0",
+          "page": 1,
+          "version": 1
+        }
+      ],
+      "raw_qwen_responses": [
+        {
+          "id": "chatcmpl-33a9064bd072476bbe434e04124b68a7",
+          "object": "chat.completion",
+          "created": 1792505551,
+          "model": "qwen-local",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"evidence\":[{\"source_id\":\"S1\"},{\"source_id\":\"S2\"}]}",
+                "refusal": null,
+                "annotations": null,
+                "audio": null,
+                "function_call": null,
+                "tool_calls": [],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": "stop",
+              "stop_reason": null,
+              "token_ids": null
+            }
+          ],
+          "service_tier": null,
+          "system_fingerprint": null,
+          "usage": {
+            "prompt_tokens": 300,
+            "total_tokens": 318,
+            "completion_tokens": 18,
+            "prompt_tokens_details": null
+          },
+          "prompt_logprobs": null,
+          "prompt_token_ids": null,
+          "kv_transfer_params": null
+        }
+      ],
+      "latency_ms": 257.603
+    },
+    {
+      "id": "two-sources",
+      "category": "multiple_sources",
+      "query": "Приведи правила для узла У-405 из обеих инструкций.",
+      "status": "PASS",
+      "actual": "answered",
+      "mode": "vllm",
+      "usage": {
+        "mode": "vllm",
+        "input_tokens": 294,
+        "output_tokens": 18,
+        "budget_input_tokens": 294,
+        "max_model_len": 4096,
+        "reserved_output_tokens": 700,
+        "safety_margin": 64
+      },
+      "llm_calls": 1,
+      "returned_sources": [
+        "two-sources-0",
+        "two-sources-1"
+      ],
+      "facts_covered": true,
+      "citation_valid": true,
+      "token_budget_ok": true,
+      "grounding_rejections": [],
+      "evidence": [
+        {
+          "chunk_id": "e35f9013425d2b5e0eb04774",
+          "quote": "Перед ремонтом узла У-405 питание отключают.",
+          "start": 0,
+          "end": 44,
+          "selection_start": 0,
+          "selection_end": 44,
+          "title": "two-sources-1",
+          "page": 1,
+          "version": 1
+        },
+        {
+          "chunk_id": "46cb46d5b14d9101661940de",
+          "quote": "Узел У-405 отключается при 105 °C.",
+          "start": 0,
+          "end": 34,
+          "selection_start": 0,
+          "selection_end": 34,
+          "title": "two-sources-0",
+          "page": 1,
+          "version": 1
+        }
+      ],
+      "raw_qwen_responses": [
+        {
+          "id": "chatcmpl-7a63442221374e8d941cb628e7a68c88",
+          "object": "chat.completion",
+          "created": 1792505551,
+          "model": "qwen-local",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"evidence\":[{\"source_id\":\"S1\"},{\"source_id\":\"S2\"}]}",
+                "refusal": null,
+                "annotations": null,
+                "audio": null,
+                "function_call": null,
+                "tool_calls": [],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": "stop",
+              "stop_reason": null,
+              "token_ids": null
+            }
+          ],
+          "service_tier": null,
+          "system_fingerprint": null,
+          "usage": {
+            "prompt_tokens": 294,
+            "total_tokens": 312,
+            "completion_tokens": 18,
+            "prompt_tokens_details": null
+          },
+          "prompt_logprobs": null,
+          "prompt_token_ids": null,
+          "kv_transfer_params": null
+        }
+      ],
+      "latency_ms": 255.717
+    },
+    {
+      "id": "abbreviation",
+      "category": "technical_abbreviations",
+      "query": "Что требует п. 3.2 для Н-290?",
+      "status": "PASS",
+      "actual": "answered",
+      "mode": "vllm",
+      "usage": {
+        "mode": "vllm",
+        "input_tokens": 288,
+        "output_tokens": 12,
+        "budget_input_tokens": 288,
+        "max_model_len": 4096,
+        "reserved_output_tokens": 700,
+        "safety_margin": 64
+      },
+      "llm_calls": 1,
+      "returned_sources": [
+        "abbreviation-0"
+      ],
+      "facts_covered": true,
+      "citation_valid": true,
+      "token_budget_ok": true,
+      "grounding_rejections": [],
+      "evidence": [
+        {
+          "chunk_id": "11228fd4d7224e6b5c53e6fd",
+          "quote": "ГОСТ Р 123.4, п. 3.2: насос Н-290 останавливают при 113 °C. Работу возобновляют только после проверки.",
+          "start": 0,
+          "end": 102,
+          "selection_start": 0,
+          "selection_end": 102,
+          "title": "abbreviation-0",
+          "page": 1,
+          "version": 1
+        }
+      ],
+      "raw_qwen_responses": [
+        {
+          "id": "chatcmpl-e269247f38c7423fba68a8e6f1d7796c",
+          "object": "chat.completion",
+          "created": 1792505552,
+          "model": "qwen-local",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"evidence\":[{\"source_id\":\"S1\"}]}",
+                "refusal": null,
+                "annotations": null,
+                "audio": null,
+                "function_call": null,
+                "tool_calls": [],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": "stop",
+              "stop_reason": null,
+              "token_ids": null
+            }
+          ],
+          "service_tier": null,
+          "system_fingerprint": null,
+          "usage": {
+            "prompt_tokens": 288,
+            "total_tokens": 300,
+            "completion_tokens": 12,
+            "prompt_tokens_details": null
+          },
+          "prompt_logprobs": null,
+          "prompt_token_ids": null,
+          "kv_transfer_params": null
+        }
+      ],
+      "latency_ms": 178.852
+    },
+    {
+      "id": "decimal",
+      "category": "numbers_units",
+      "query": "Какое значение установлено для Р-889?",
+      "status": "PASS",
+      "actual": "answered",
+      "mode": "vllm",
+      "usage": {
+        "mode": "vllm",
+        "input_tokens": 268,
+        "output_tokens": 12,
+        "budget_input_tokens": 268,
+        "max_model_len": 4096,
+        "reserved_output_tokens": 700,
+        "safety_margin": 64
+      },
+      "llm_calls": 1,
+      "returned_sources": [
+        "decimal-0"
+      ],
+      "facts_covered": true,
+      "citation_valid": true,
+      "token_budget_ok": true,
+      "grounding_rejections": [],
+      "evidence": [
+        {
+          "chunk_id": "43c63a9b87cd09cb530833df",
+          "quote": "Для регулятора Р-889 установлено значение 3,75 МПа. Самовольное изменение запрещено.",
+          "start": 0,
+          "end": 84,
+          "selection_start": 0,
+          "selection_end": 84,
+          "title": "decimal-0",
+          "page": 1,
+          "version": 1
+        }
+      ],
+      "raw_qwen_responses": [
+        {
+          "id": "chatcmpl-444cb3985b9d41799e3d22f3130a6fd4",
+          "object": "chat.completion",
+          "created": 1792505552,
+          "model": "qwen-local",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"evidence\":[{\"source_id\":\"S1\"}]}",
+                "refusal": null,
+                "annotations": null,
+                "audio": null,
+                "function_call": null,
+                "tool_calls": [],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": "stop",
+              "stop_reason": null,
+              "token_ids": null
+            }
+          ],
+          "service_tier": null,
+          "system_fingerprint": null,
+          "usage": {
+            "prompt_tokens": 268,
+            "total_tokens": 280,
+            "completion_tokens": 12,
+            "prompt_tokens_details": null
+          },
+          "prompt_logprobs": null,
+          "prompt_token_ids": null,
+          "kv_transfer_params": null
+        }
+      ],
+      "latency_ms": 178.897
+    },
+    {
+      "id": "contradiction",
+      "category": "contradictory_evidence",
+      "query": "Какое давление Н-515?",
+      "status": "PASS",
+      "actual": "answered",
+      "mode": "extractive-conflict",
+      "usage": {
+        "mode": "extractive-conflict",
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "fallback_reason": "unreconciled_numeric_sources",
+        "human_review_required": true
+      },
+      "llm_calls": 0,
+      "returned_sources": [
+        "contradiction-0",
+        "contradiction-1"
+      ],
+      "facts_covered": true,
+      "citation_valid": true,
+      "token_budget_ok": true,
+      "grounding_rejections": [],
+      "evidence": [
+        {
+          "chunk_id": "3e1c3a56286658b9f1c1d7b8",
+          "quote": "Давление насоса Н-515: 3 бар.",
+          "start": 0,
+          "end": 29,
+          "selection_start": 0,
+          "selection_end": 29,
+          "title": "contradiction-0",
+          "page": 1,
+          "version": 1
+        },
+        {
+          "chunk_id": "9c6bdf7d82826563fb5a624e",
+          "quote": "Давление насоса Н-515: 9 бар.",
+          "start": 0,
+          "end": 29,
+          "selection_start": 0,
+          "selection_end": 29,
+          "title": "contradiction-1",
+          "page": 1,
+          "version": 1
+        }
+      ],
+      "raw_qwen_responses": [],
+      "latency_ms": 8.47
+    },
+    {
+      "id": "missing",
+      "category": "no_evidence",
+      "query": "Какова масса З-6368?",
+      "status": "PASS",
+      "actual": "no_evidence",
+      "mode": "extractive",
+      "usage": {
+        "mode": "extractive",
+        "input_tokens": 0,
+        "output_tokens": 0
+      },
+      "llm_calls": 0,
+      "returned_sources": [],
+      "facts_covered": true,
+      "citation_valid": true,
+      "token_budget_ok": true,
+      "grounding_rejections": [],
+      "evidence": [],
+      "raw_qwen_responses": [],
+      "latency_ms": 9.016
+    },
+    {
+      "id": "wrong-asset",
+      "category": "no_evidence",
+      "query": "Какое давление З-8805?",
+      "status": "PASS",
+      "actual": "no_evidence",
+      "mode": "vllm",
+      "usage": {
+        "mode": "vllm",
+        "input_tokens": 249,
+        "output_tokens": 6,
+        "budget_input_tokens": 249,
+        "max_model_len": 4096,
+        "reserved_output_tokens": 700,
+        "safety_margin": 64
+      },
+      "llm_calls": 1,
+      "returned_sources": [],
+      "facts_covered": true,
+      "citation_valid": true,
+      "token_budget_ok": true,
+      "grounding_rejections": [],
+      "evidence": [],
+      "raw_qwen_responses": [
+        {
+          "id": "chatcmpl-4646e95b00384ad6a415c19d20fc3f37",
+          "object": "chat.completion",
+          "created": 1792505552,
+          "model": "qwen-local",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"evidence\":[]}",
+                "refusal": null,
+                "annotations": null,
+                "audio": null,
+                "function_call": null,
+                "tool_calls": [],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": "stop",
+              "stop_reason": null,
+              "token_ids": null
+            }
+          ],
+          "service_tier": null,
+          "system_fingerprint": null,
+          "usage": {
+            "prompt_tokens": 249,
+            "total_tokens": 255,
+            "completion_tokens": 6,
+            "prompt_tokens_details": null
+          },
+          "prompt_logprobs": null,
+          "prompt_token_ids": null,
+          "kv_transfer_params": null
+        }
+      ],
+      "latency_ms": 99.278
+    },
+    {
+      "id": "shared-tenant",
+      "category": "tenant_isolation",
+      "query": "Назови правило для Г-722.",
+      "status": "PASS",
+      "actual": "answered",
+      "mode": "vllm",
+      "usage": {
+        "mode": "vllm",
+        "input_tokens": 250,
+        "output_tokens": 12,
+        "budget_input_tokens": 250,
+        "max_model_len": 4096,
+        "reserved_output_tokens": 700,
+        "safety_margin": 64
+      },
+      "llm_calls": 1,
+      "returned_sources": [
+        "shared-tenant-0"
+      ],
+      "facts_covered": true,
+      "citation_valid": true,
+      "token_budget_ok": true,
+      "grounding_rejections": [],
+      "evidence": [
+        {
+          "chunk_id": "7788568da00cf5c725d64b14",
+          "quote": "Узел Г-722 осматривают перед сменой.",
+          "start": 0,
+          "end": 36,
+          "selection_start": 0,
+          "selection_end": 36,
+          "title": "shared-tenant-0",
+          "page": 1,
+          "version": 1
+        }
+      ],
+      "raw_qwen_responses": [
+        {
+          "id": "chatcmpl-2eda2246e9a64b56ac09206a5e8a939d",
+          "object": "chat.completion",
+          "created": 1792505552,
+          "model": "qwen-local",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"evidence\":[{\"source_id\":\"S1\"}]}",
+                "refusal": null,
+                "annotations": null,
+                "audio": null,
+                "function_call": null,
+                "tool_calls": [],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": "stop",
+              "stop_reason": null,
+              "token_ids": null
+            }
+          ],
+          "service_tier": null,
+          "system_fingerprint": null,
+          "usage": {
+            "prompt_tokens": 250,
+            "total_tokens": 262,
+            "completion_tokens": 12,
+            "prompt_tokens_details": null
+          },
+          "prompt_logprobs": null,
+          "prompt_token_ids": null,
+          "kv_transfer_params": null
+        }
+      ],
+      "latency_ms": 173.365
+    },
+    {
+      "id": "ocr-new-query",
+      "category": "ocr",
+      "query": "Что в регламенте сказано о контуре К-2 и датчике Д-8?",
+      "status": "PASS",
+      "actual": "answered",
+      "mode": "vllm",
+      "usage": {
+        "mode": "vllm",
+        "input_tokens": 326,
+        "output_tokens": 12,
+        "budget_input_tokens": 326,
+        "max_model_len": 4096,
+        "reserved_output_tokens": 700,
+        "safety_margin": 64
+      },
+      "llm_calls": 1,
+      "returned_sources": [
+        "scan"
+      ],
+      "facts_covered": true,
+      "citation_valid": true,
+      "token_budget_ok": true,
+      "grounding_rejections": [],
+      "evidence": [
+        {
+          "chunk_id": "1852a48c00c57c0a5364925b",
+          "quote": "Учебный технический регламент\n\nНасос Н-17 подключен к контуру К-2.\nКонтур К-2 контролируется датчиком Д-8.\nРежим: 100 оборотов в минуту.\n\nСинтетический документ для проверки ОСК.",
+          "start": 0,
+          "end": 178,
+          "selection_start": 0,
+          "selection_end": 178,
+          "title": "scan",
+          "page": 1,
+          "version": 1
+        }
+      ],
+      "raw_qwen_responses": [
+        {
+          "id": "chatcmpl-69d5fb2a976f4c2f8d5819327697541d",
+          "object": "chat.completion",
+          "created": 1792505553,
+          "model": "qwen-local",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"evidence\":[{\"source_id\":\"S1\"}]}",
+                "refusal": null,
+                "annotations": null,
+                "audio": null,
+                "function_call": null,
+                "tool_calls": [],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": "stop",
+              "stop_reason": null,
+              "token_ids": null
+            }
+          ],
+          "service_tier": null,
+          "system_fingerprint": null,
+          "usage": {
+            "prompt_tokens": 326,
+            "total_tokens": 338,
+            "completion_tokens": 12,
+            "prompt_tokens_details": null
+          },
+          "prompt_logprobs": null,
+          "prompt_token_ids": null,
+          "kv_transfer_params": null
+        }
+      ],
+      "latency_ms": 507.361
+    }
+  ],
+  "limitations": [
+    "Author-generated annotations, not independent domain expert evaluation",
+    "New query reuses the existing synthetic image-only OCR source; text cases are newly generated",
+    "No proof of absence of overfitting or arbitrary semantic entailment"
+  ],
+  "expected": 16,
+  "completed": 16,
+  "failures": 0,
+  "modes": {
+    "vllm": 14,
+    "extractive-conflict": 1,
+    "extractive": 1
+  },
+  "grounding_rejections": {},
+  "llm_calls": 14,
+  "quality": {
+    "direct_valid_llm_answers": 13,
+    "answerable_non_conflict_cases": 13,
+    "direct_valid_llm_answer_rate": 1.0,
+    "correct_fallbacks": 2,
+    "invalid_generation_fallbacks": 0,
+    "valid_llm_abstentions": 1,
+    "unreliable_answers_or_errors": 0,
+    "citation_correctness": 1,
+    "extractive_source_faithfulness_proxy": 1,
+    "annotated_answer_relevancy_proxy": 1.0,
+    "calibrated_llm_judge_faithfulness": null,
+    "calibrated_llm_judge_answer_relevancy": null
+  },
+  "latency_ms": {
+    "p50": 178.85184100032347,
+    "p95": 507.3607389999779,
+    "p99": 507.3607389999779
+  },
+  "tokens": {
+    "input_tokens": 3855,
+    "output_tokens": 180
+  },
+  "decision": "PASS"
+}

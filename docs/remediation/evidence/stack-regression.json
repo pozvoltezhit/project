@@ -1,0 +1,12 @@
+{
+  "decision": "PASS",
+  "namespace": "course-remediation-20261020",
+  "timestamp": 1792496687.6019728,
+  "bundle_hash": "bc4d439567d13f277a9091875f4c9c031538b0a350e28282393617a420f9932f",
+  "versioned_index": "PASS: build, validate, publish, retain, rollback, reject staged failure",
+  "retirement": "Dry-run only; active/recent versions protected",
+  "restore": "PASS: new directory, SQL integrity, A/B, audit chain, Qdrant/Neo4j rebuild",
+  "restore_seconds": 0.6144,
+  "snapshot_age_seconds": 0.6156,
+  "rpo": "No fixture documents lost; production RPO remains unestablished"
+}

@@ -1,0 +1,39 @@
+{
+  "decision": "PASS",
+  "timestamp": 1792496294.7115254,
+  "bundle_hash": "00b8ac1c67c4cd2d2775aa07d49fa9dc42571bb527a5d79a599cbf462ad6e6f2",
+  "cases": [
+    {
+      "case": "F02-original",
+      "status": "PASS",
+      "usage": {
+        "mode": "extractive-context-limited",
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "fallback_reason": "context_budget",
+        "budget_input_tokens": 2767,
+        "max_model_len": 4096,
+        "reserved_output_tokens": 700,
+        "safety_margin": 64
+      }
+    },
+    {
+      "case": "real-generation",
+      "status": "PASS",
+      "usage": {
+        "mode": "vllm",
+        "input_tokens": 214,
+        "output_tokens": 51,
+        "budget_input_tokens": 214,
+        "max_model_len": 4096,
+        "reserved_output_tokens": 700,
+        "safety_margin": 64
+      }
+    },
+    {
+      "case": "oversized-question",
+      "status": "PASS",
+      "outcome": "controlled-422"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+# Preserve exact bytes of the tested sources and historical evidence.
+# -text disables line-ending conversion without disabling text diffs.
+* -text
+*.pdf binary
+*.jpg binary
+*.png binary
+*.mp4 binary
+*.xlsx binary

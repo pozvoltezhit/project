@@ -1,0 +1,36 @@
+{
+  "checks": [
+    {
+      "check": "graph-expansion-adds-evidence-and-enforces-ACL",
+      "status": "PASS",
+      "detail": "Bridge absent from lexical query; added by allowed graph traversal"
+    },
+    {
+      "check": "normalized-query-guard",
+      "status": "PASS",
+      "detail": "NFKC-obfuscated known injection blocked before retrieval"
+    },
+    {
+      "check": "normalized-document-quarantine",
+      "status": "PASS",
+      "detail": "Quarantined before insertion"
+    },
+    {
+      "check": "unavailable-vector-service",
+      "status": "PASS",
+      "detail": "Actual refused TCP connection becomes a safe HTTP 503"
+    },
+    {
+      "check": "relevant-input-boundaries",
+      "status": "PASS",
+      "detail": "Empty/whitespace/over-limit query; empty source; no evidence"
+    },
+    {
+      "check": "repeat-ingestion-and-stale-memory",
+      "status": "PASS",
+      "detail": "Duplicate roles deduplicated; replaced source and memory reauthorized"
+    }
+  ],
+  "passed": 6,
+  "total": 6
+}

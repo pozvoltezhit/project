@@ -1,0 +1,8 @@
+test_F01_document_tenant_and_version_change (tests.test_remediation.SecurityRegression.test_F01_document_tenant_and_version_change) ... ok
+test_F01_session_owner_rechecked_at_release (tests.test_remediation.SecurityRegression.test_F01_session_owner_rechecked_at_release) ... ok
+test_F01_sse_revocation (tests.test_remediation.SecurityRegression.test_F01_sse_revocation) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 2.449s
+
+OK

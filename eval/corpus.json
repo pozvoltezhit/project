@@ -1,0 +1,15 @@
+{
+  "version": "knowledge-fixture-v1",
+  "synthetic": true,
+  "documents": [
+    {"id":"equipment","tenant":"factory","roles":["staff"],"type":"text","text":"Насос Н-17 подключен к контуру К-2. Рабочее давление Н-17 не должно превышать 6 бар."},
+    {"id":"control","tenant":"factory","roles":["staff"],"type":"text","text":"Контур К-2 контролируется датчиком Д-8. Датчик Д-8 подаёт сигнал при температуре выше 80 градусов."},
+    {"id":"single","tenant":"factory","roles":["staff"],"type":"text","text":"К-2 имеет температуру аварийного отключения 120 °C."},
+    {"id":"secret","tenant":"factory","roles":["restricted"],"type":"text","text":"Насос Н-17 связан с проектом П-9. Секретный бюджет П-9 составляет 987654321 рублей."},
+    {"id":"negation","tenant":"factory","roles":["staff"],"type":"text","text":"Работа насоса Н-99 не разрешена. Запуск допускается только после осмотра, кроме режима А-7."},
+    {"id":"schedule","tenant":"factory","roles":["staff"],"type":"text","text":"Осмотр У-12 проводится с 10.10.2026 до 20.10.2026. Температура хранения от 5 до 10 °C."},
+    {"id":"conflict-a","tenant":"factory","roles":["staff"],"type":"text","text":"Насос Н-40: рабочее давление 6 бар. Источник требует проверки инженером."},
+    {"id":"conflict-b","tenant":"factory","roles":["staff"],"type":"text","text":"Насос Н-40: рабочее давление 9 бар. Источник требует проверки инженером."},
+    {"id":"english","tenant":"factory","roles":["staff"],"type":"text","text":"Unit U-31 must remain disconnected. Inspection is required before startup."}
+  ]
+}

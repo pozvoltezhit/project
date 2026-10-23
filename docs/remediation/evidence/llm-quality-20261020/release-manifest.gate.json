@@ -1,0 +1,159 @@
+{
+  "format": "knowledge-release-v1",
+  "timestamp": 1792506793.8084328,
+  "commit_sha": null,
+  "bundle": {
+    "tree_sha256": "96d03e4d965d0b1a694da71b2f7f4093c5d9c9594abe8e25a56227d869934f51",
+    "files": {
+      "backend/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "backend/adapters.py": "80ec6560dd42ed9a0b623ca3c94a7e50397f6470f29d675efa0215b85b8b63dd",
+      "backend/admission.py": "601ed007157ff8b724697a5972f215b19f99ff92caf4abff290fbe01346b254f",
+      "backend/api.py": "21c00d5d068241d67037ac88420c9cc9b9a121e9842521c8c97a9a56b74fce3a",
+      "backend/backup.py": "54817aa39978c16b33d09aabd182f359671a4490684b52a66b7e3330c776b486",
+      "backend/benchmark.py": "a4de647d579d13a0e3dc9a6b5615f759ae2a3b63e5c351cdf7ef0c0ca1b4e284",
+      "backend/budget.py": "8637ab4a5933dce50eef0749ad70c9caeae577229512bb854207d3fba29afa6c",
+      "backend/bundle.py": "c8e614c5347711281a3602465da9023785a64c27428d6bcc274c7bc8f9bb01ae",
+      "backend/check.py": "26093851d3c8bf9f3409e12a17df5202fd10a59a1bb2c6f657a94c23931a4893",
+      "backend/core.py": "d952a5b1988ace3b36dfb08a9efeafd9006f7c3743c7ea96bd9dd7b4d2a072cf",
+      "backend/evaluate.py": "428929690e434bde2c76a9030952cc60d706c8a81f27828de0d11be675fad14d",
+      "backend/finops.py": "41566e5842d4046949cfa091964129b51d0a1c34f0b4b694d70f5dc5c6b7ff84",
+      "backend/gpu_check.py": "bdeb836c952ac876a312c9902f4efad6c1d867a489ae7fa6748d156a47583ca9",
+      "backend/grounding.py": "07e7a9186fb11f64e3cc7fa1f346e229ca839b115c6be6f9eb8c5bc23fdac1b3",
+      "backend/index_admin.py": "0dfba134037b8ff9f0ede0930c704e39f9ac68e1d8391816f5968242a731c22d",
+      "backend/ingest.py": "b51503d0cd03d3e58ce4742faa53a0e0f0c2e8b8da03f20bd76c4be842654826",
+      "backend/init_demo.py": "cd9f916f3a212257eeca592db388a144a6276ab1aa3d767221380b4e4d93fa94",
+      "backend/integration_check.py": "03e2cb5663140205e57efdbee5843504c95325f9f70111fecdee2b8f1a444162",
+      "backend/quality_export.py": "4704cecb9d2f5d8e4f0f4685cb181fd71b3f252d94a08f5ace5ce6384d539899",
+      "backend/release.py": "2561fdc8a877fa55b108502584fcba70a5e4c3630063525aaaf8d40bf81a7393",
+      "backend/retention.py": "ad020a385d477240ea110598636ba981e49fc848424d6263e0235987a7165ae1",
+      "backend/stack_check.py": "4a10e823594698dbb225c8c2a9ab3dd8fbbe8a6e6d00653102c1ef670138f25b",
+      "backend/telemetry.py": "5adb805726672588dad6154f482b86885b6c3b8d0dee6f312ac341def4cfb501",
+      "eval/build_golden.py": "d3bd4bc791fa4cf17dea0caa6241e310526b8625cb5e65c1a8f748f3d8be1076",
+      "eval/corpus.json": "d48bc0f2cc8bd1a7f49561333fb506493fc17afe826118506ac3a89efff12725",
+      "eval/golden.json": "fdedcb94301588459ef1762f0fd00660a3cd5dc50545e7db45ca0e89d5f5847b",
+      "eval/llm-quality-holdout.json": "60622bc4b3da49fae16cb0dba1cdef4ab4fd8c3c2f968137ed50dc07b59c6604",
+      "eval/llm-quality-validation.json": "3bb9bba35a49a337c5f48efcd27ceae5e0700ddbed38cdcf55e9ba98a0e8fc95",
+      "frontend/index.html": "935c322ccc4153be1f54a1644072f4b6769410d81bc8f04c89b8fa199d244764",
+      "requirements-lock.txt": "c119cef415f8317bfc8083a9844507c1a14f415943b6cb627aa840d6692a14ed"
+    },
+    "dependency_lock_sha256": "c119cef415f8317bfc8083a9844507c1a14f415943b6cb627aa840d6692a14ed"
+  },
+  "image_digest": "sha256:876185015815686554dcf4d223d674ec571433d27e6281792b952c1af6ae203e",
+  "digest_kind": "docker_content_addressed_local_image_id",
+  "model_manifest": {
+    "repository": "Qwen/Qwen2.5-7B-Instruct-AWQ",
+    "revision": "b25037543e9394b818fdfca67ab2a00ecc7dd641",
+    "date": "2026-10-05",
+    "files": [
+      {
+        "name": "LICENSE",
+        "size": 11343,
+        "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+        "official_lfs_verified": false
+      },
+      {
+        "name": "README.md",
+        "size": 6368,
+        "sha256": "0d578d3f0fc880ccaea80fcbfd49161b7c9b98e20e235b0a03608b9958c622af",
+        "official_lfs_verified": false
+      },
+      {
+        "name": "config.json",
+        "size": 841,
+        "sha256": "ec0c1f5f875ad8bc1f78c5140c22dbdde1b55478442ad358e7a4d9ecf947a327",
+        "official_lfs_verified": false
+      },
+      {
+        "name": "generation_config.json",
+        "size": 243,
+        "sha256": "9df8ac8558514924f3481a609f1e5590ab4416efc600b12ad805155d79581c59",
+        "official_lfs_verified": false
+      },
+      {
+        "name": "merges.txt",
+        "size": 1671839,
+        "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+        "official_lfs_verified": false
+      },
+      {
+        "name": "model-00001-of-00002.safetensors",
+        "size": 3996422976,
+        "sha256": "4ad6e70f93823a9228931615e04b5e9293854c236fb4bd5f85e27f3b600605ad",
+        "official_lfs_verified": true
+      },
+      {
+        "name": "model-00002-of-00002.safetensors",
+        "size": 1574406784,
+        "sha256": "920a8cc9d3c81668f18014a69bb041ab8bab22a31640a713f90f5e7580e2f126",
+        "official_lfs_verified": true
+      },
+      {
+        "name": "model.safetensors.index.json",
+        "size": 62662,
+        "sha256": "559b6859f37625080bf49eea80806ecc2f859a13b316b7fae2ff4432b6308e36",
+        "official_lfs_verified": false
+      },
+      {
+        "name": "tokenizer.json",
+        "size": 7031645,
+        "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+        "official_lfs_verified": false
+      },
+      {
+        "name": "tokenizer_config.json",
+        "size": 7305,
+        "sha256": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+        "official_lfs_verified": false
+      },
+      {
+        "name": "vocab.json",
+        "size": 2776833,
+        "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+        "official_lfs_verified": false
+      }
+    ]
+  },
+  "tokenizer_identity": "same local vLLM artifact and chat template",
+  "index_schema": "v2-versioned-sql-pointer",
+  "prompt_version": "evidence-select-v4",
+  "serving_budget": {
+    "mode": "extractive-context-limited",
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "fallback_reason": "context_budget",
+    "budget_input_tokens": 2800,
+    "max_model_len": 4096,
+    "reserved_output_tokens": 700,
+    "safety_margin": 64
+  },
+  "evaluation": {
+    "dataset_version": "golden-v1-synthetic",
+    "corpus_version": "knowledge-fixture-v1",
+    "dataset_hash": "fdedcb94301588459ef1762f0fd00660a3cd5dc50545e7db45ca0e89d5f5847b",
+    "corpus_hash": "d48bc0f2cc8bd1a7f49561333fb506493fc17afe826118506ac3a89efff12725",
+    "model_version": "qwen-local",
+    "timestamp": 1792505571.1084764,
+    "gate": {
+      "decision": "GO",
+      "scope": "synthetic_mvp_only",
+      "reasons": [],
+      "production_approval": false,
+      "threshold_status": "provisional"
+    }
+  },
+  "evidence_sha256": {
+    "unit": "a9cf421118a8ceaa7e326f1082816401723cee134da7d3456ef9a0c1f87e3189",
+    "cpu": "4c50a5ade880c9c26310040a19db8ec420759c011c62f3c91c8d6289141f2cbd",
+    "gpu": "b203565e92cee9b1c21ae16e57d0822ceb97695eb0f3f1db0fc8b621eddaa75a",
+    "gpu_regression": "bbe0f115c637741133331bb1f6be75231079375a3ac5a6c99a7cf4457f9d693a",
+    "eval": "1a1f30659b2748a382a220324faf58306ad05be048e7aff789263c793b813825"
+  },
+  "readiness": {
+    "decision": "GO",
+    "scope": "synthetic_mvp",
+    "production_approval": false,
+    "reasons": []
+  },
+  "promotion": "Use the same content-addressed image. Never rebuild for promotion.",
+  "rollback": "Retain prior image and compatible index version; re-run readiness/security smoke before routing"
+}

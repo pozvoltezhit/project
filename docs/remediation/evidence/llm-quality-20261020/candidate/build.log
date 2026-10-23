@@ -1,0 +1,23 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile.offline
+#1 transferring dockerfile: 929B 0.0s done
+#1 DONE 0.1s
+
+#2 [internal] load metadata for docker.io/library/sha256:185bfd1525b668d3483118d9203e2d80e4e502f14174a6b9b48fcb7ebb5227d1
+#2 ERROR: pull access denied, repository does not exist or may require authorization: server message: insufficient_scope: authorization failed
+------
+ > [internal] load metadata for docker.io/library/sha256:185bfd1525b668d3483118d9203e2d80e4e502f14174a6b9b48fcb7ebb5227d1:
+------
+WARNING: current commit information was not captured by the build: failed to read current commit information with git rev-parse --is-inside-work-tree
+Dockerfile.offline:4
+--------------------
+   2 |     # This is not a claim that apt/base images can be built from scratch offline.
+   3 |     ARG BASE_IMAGE=course-knowledge-audit:20261020
+   4 | >>> FROM ${BASE_IMAGE}
+   5 |     COPY requirements-lock.txt /tmp/expected-requirements-lock.txt
+   6 |     RUN python -c "import hashlib,importlib.metadata,pathlib; expected=pathlib.Path('/tmp/expected-requirements-lock.txt'); assert hashlib.sha256(expected.read_bytes()).digest()==hashlib.sha256(pathlib.Path('/app/requirements-lock.txt').read_bytes()).digest(); pins=[line.split('==') for line in expected.read_text().splitlines() if '==' in line]; assert all(importlib.metadata.version(name)==version for name,version in pins)"
+--------------------
+ERROR: failed to build: failed to solve: sha256:185bfd1525b668d3483118d9203e2d80e4e502f14174a6b9b48fcb7ebb5227d1: failed to resolve source metadata for docker.io/library/sha256:185bfd1525b668d3483118d9203e2d80e4e502f14174a6b9b48fcb7ebb5227d1: pull access denied, repository does not exist or may require authorization: server message: insufficient_scope: authorization failed
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/en46c4uskq3dc4mmd7m71f6or

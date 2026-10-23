@@ -1,0 +1,181 @@
+{
+  "timestamp": 1792514954.8643672,
+  "namespace": "course-final-20261020",
+  "all_owned_containers_stopped": true,
+  "containers": [
+    {
+      "Command": "\"uvicorn backend.api\u2026\"",
+      "CreatedAt": "2026-10-20 17:27:47 +0300 MSK",
+      "HealthStatus": "unhealthy",
+      "ID": "cce77235d7b5",
+      "Image": "876185015815",
+      "Labels": "com.docker.compose.config-hash=5198bec7a9eac4fb68e8a8aa680ec1bc8e407b18c1872a1601358a2c9d555563,com.docker.compose.container-number=1,com.docker.compose.depends_on=neo4j:service_started:false,qdrant:service_started:false,com.docker.compose.image=sha256:b715e1823316d64403698d143a2b8180e690b508fbcca68139113739b2d97212,com.docker.compose.oneoff=False,com.docker.compose.project.config_files=C:\\Users\\PZVLTZHT\\Desktop\\\u041a\u0443\u0440\u0441\\\u0417\u0430\u0434\u0430\u043d\u0438\u044f\\\u0420\u0435\u0448\u0435\u043d\u0438\u044f\\\u041f\u0440\u043e\u0435\u043a\u0442\\data\\final-20261020\\compose.json,com.docker.compose.project.working_dir=C:\\Users\\PZVLTZHT\\Desktop\\\u041a\u0443\u0440\u0441\\\u0417\u0430\u0434\u0430\u043d\u0438\u044f\\\u0420\u0435\u0448\u0435\u043d\u0438\u044f\\\u041f\u0440\u043e\u0435\u043a\u0442\\data\\final-20261020,com.docker.compose.project=course-final-20261020,com.docker.compose.replace=backend-1,com.docker.compose.service=backend,com.docker.compose.version=5.6.0,desktop.docker.io/binds/0/Source=C:/Users/PZVLTZHT/Desktop/\u041a\u0443\u0440\u0441/\u0417\u0430\u0434\u0430\u043d\u0438\u044f/\u0420\u0435\u0448\u0435\u043d\u0438\u044f/\u041f\u0440\u043e\u0435\u043a\u0442/data/final-20261020/runtime,desktop.docker.io/binds/0/SourceKind=hostFile,desktop.docker.io/binds/0/Target=/app/data,desktop.docker.io/binds/1/Source=C:/Users/PZVLTZHT/Desktop/\u041a\u0443\u0440\u0441/\u0417\u0430\u0434\u0430\u043d\u0438\u044f/\u0420\u0435\u0448\u0435\u043d\u0438\u044f/\u041f\u0440\u043e\u0435\u043a\u0442/tools,desktop.docker.io/binds/1/SourceKind=hostFile,desktop.docker.io/binds/1/Target=/instrument,desktop.docker.io/ports.scheme=v2",
+      "LocalVolumes": "0",
+      "Mounts": "/run/desktop/m\u2026,/run/desktop/m\u2026",
+      "Names": "course-final-20261020-backend-1",
+      "Networks": "course-final-20261020_internal",
+      "Platform": {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      "Ports": "",
+      "RunningFor": "2 hours ago",
+      "Size": "8.19kB (virtual 480MB)",
+      "State": "exited",
+      "Status": "Exited (137) About a minute ago"
+    },
+    {
+      "Command": "\"python3 -m vllm.ent\u2026\"",
+      "CreatedAt": "2026-10-20 15:22:09 +0300 MSK",
+      "HealthStatus": "unhealthy",
+      "ID": "f0090641422e",
+      "Image": "vllm/vllm-openai:v0.10.2",
+      "Labels": "com.docker.compose.config-hash=cb95035336f1c847b14ad3e9291b8f6154175b18f1429206bef396d426fb9774,com.docker.compose.container-number=1,com.docker.compose.depends_on=,com.docker.compose.image=sha256:df2607b26bdda2875de4832f4d08da0055b4b6e3570347f3a849bcc652771dd6,com.docker.compose.oneoff=False,com.docker.compose.project.config_files=C:\\Users\\PZVLTZHT\\Desktop\\\u041a\u0443\u0440\u0441\\\u0417\u0430\u0434\u0430\u043d\u0438\u044f\\\u0420\u0435\u0448\u0435\u043d\u0438\u044f\\\u041f\u0440\u043e\u0435\u043a\u0442\\data\\final-20261020\\compose.json,com.docker.compose.project.working_dir=C:\\Users\\PZVLTZHT\\Desktop\\\u041a\u0443\u0440\u0441\\\u0417\u0430\u0434\u0430\u043d\u0438\u044f\\\u0420\u0435\u0448\u0435\u043d\u0438\u044f\\\u041f\u0440\u043e\u0435\u043a\u0442\\data\\final-20261020,com.docker.compose.project=course-final-20261020,com.docker.compose.service=vllm,com.docker.compose.version=5.6.0,desktop.docker.io/binds/0/Source=C:\\Users\\PZVLTZHT\\Desktop\\\u041a\u0443\u0440\u0441\\\u0417\u0430\u0434\u0430\u043d\u0438\u044f\\\u0420\u0435\u0448\u0435\u043d\u0438\u044f\\\u041f\u0440\u043e\u0435\u043a\u0442\\models\\qwen-awq,desktop.docker.io/binds/0/SourceKind=hostFile,desktop.docker.io/binds/0/Target=/models/qwen,desktop.docker.io/ports.scheme=v2,maintainer=NVIDIA CORPORATION <cudatools@nvidia.com>,org.opencontainers.image.ref.name=ubuntu,org.opencontainers.image.version=22.04",
+      "LocalVolumes": "0",
+      "Mounts": "/run/desktop/m\u2026",
+      "Names": "course-final-20261020-vllm-1",
+      "Networks": "course-final-20261020_internal",
+      "Platform": {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      "Ports": "",
+      "RunningFor": "4 hours ago",
+      "Size": "209MB (virtual 22.9GB)",
+      "State": "exited",
+      "Status": "Exited (137) About a minute ago"
+    },
+    {
+      "Command": "\"nginx -g 'daemon of\u2026\"",
+      "CreatedAt": "2026-10-20 15:19:23 +0300 MSK",
+      "HealthStatus": "none",
+      "ID": "fecd13ce2782",
+      "Image": "nginx:1.28-alpine",
+      "Labels": "com.docker.compose.config-hash=76e77ff8646bcbde14719dfd3354462c2acf5fdab4584bc92ee22c407ebf7cd8,com.docker.compose.container-number=1,com.docker.compose.depends_on=backend:service_healthy:false,grafana:service_started:false,jaeger:service_started:false,neo4j:service_started:false,prometheus:service_started:false,com.docker.compose.image=sha256:0dcc88822d45581e65ae329f8be769762bf628d3b2bb7d2a077d4aa5c98b30e3,com.docker.compose.oneoff=False,com.docker.compose.project.config_files=C:\\Users\\PZVLTZHT\\Desktop\\\u041a\u0443\u0440\u0441\\\u0417\u0430\u0434\u0430\u043d\u0438\u044f\\\u0420\u0435\u0448\u0435\u043d\u0438\u044f\\\u041f\u0440\u043e\u0435\u043a\u0442\\data\\final-20261020\\compose.json,com.docker.compose.project.working_dir=C:\\Users\\PZVLTZHT\\Desktop\\\u041a\u0443\u0440\u0441\\\u0417\u0430\u0434\u0430\u043d\u0438\u044f\\\u0420\u0435\u0448\u0435\u043d\u0438\u044f\\\u041f\u0440\u043e\u0435\u043a\u0442\\data\\final-20261020,com.docker.compose.project=course-final-20261020,com.docker.compose.service=gateway,com.docker.compose.version=5.6.0,desktop.docker.io/binds/0/Source=C:\\Users\\PZVLTZHT\\Desktop\\\u041a\u0443\u0440\u0441\\\u0417\u0430\u0434\u0430\u043d\u0438\u044f\\\u0420\u0435\u0448\u0435\u043d\u0438\u044f\\\u041f\u0440\u043e\u0435\u043a\u0442\\infra\\nginx.conf,desktop.docker.io/binds/0/SourceKind=hostFile,desktop.docker.io/binds/0/Target=/etc/nginx/nginx.conf,desktop.docker.io/ports.scheme=v2,desktop.docker.io/ports/13000/tcp=127.0.0.1:13000,desktop.docker.io/ports/16686/tcp=127.0.0.1:16686,desktop.docker.io/ports/17474/tcp=127.0.0.1:17474,desktop.docker.io/ports/17687/tcp=127.0.0.1:17687,desktop.docker.io/ports/18080/tcp=127.0.0.1:18080,desktop.docker.io/ports/19090/tcp=127.0.0.1:19090,maintainer=NGINX Docker Maintainers <docker-maint@nginx.com>",
+      "LocalVolumes": "0",
+      "Mounts": "/run/desktop/m\u2026",
+      "Names": "course-final-20261020-gateway-1",
+      "Networks": "course-final-20261020_edge,course-final-20261020_internal",
+      "Platform": {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      "Ports": "",
+      "RunningFor": "4 hours ago",
+      "Size": "4.1kB (virtual 66.5MB)",
+      "State": "exited",
+      "Status": "Exited (0) About a minute ago"
+    },
+    {
+      "Command": "\"/go/bin/all-in-one-\u2026\"",
+      "CreatedAt": "2026-10-20 15:19:22 +0300 MSK",
+      "HealthStatus": "none",
+      "ID": "807fdd6404e3",
+      "Image": "jaegertracing/all-in-one:1.76.0",
+      "Labels": "com.docker.compose.config-hash=5c6c1b7b0abb32e52849362c484710595d40772bd04c9187d0bd9dde737fa48b,com.docker.compose.container-number=1,com.docker.compose.depends_on=,com.docker.compose.image=sha256:968b31672178558da8a0c1bfc86336647d756ee6997ca196698796f5262adef1,com.docker.compose.oneoff=False,com.docker.compose.project.config_files=C:\\Users\\PZVLTZHT\\Desktop\\\u041a\u0443\u0440\u0441\\\u0417\u0430\u0434\u0430\u043d\u0438\u044f\\\u0420\u0435\u0448\u0435\u043d\u0438\u044f\\\u041f\u0440\u043e\u0435\u043a\u0442\\data\\final-20261020\\compose.json,com.docker.compose.project.working_dir=C:\\Users\\PZVLTZHT\\Desktop\\\u041a\u0443\u0440\u0441\\\u0417\u0430\u0434\u0430\u043d\u0438\u044f\\\u0420\u0435\u0448\u0435\u043d\u0438\u044f\\\u041f\u0440\u043e\u0435\u043a\u0442\\data\\final-20261020,com.docker.compose.project=course-final-20261020,com.docker.compose.service=jaeger,com.docker.compose.version=5.6.0,desktop.docker.io/ports.scheme=v2",
+      "LocalVolumes": "1",
+      "Mounts": "97aa74bc6c86e8\u2026",
+      "Names": "course-final-20261020-jaeger-1",
+      "Networks": "course-final-20261020_internal",
+      "Platform": {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      "Ports": "",
+      "RunningFor": "4 hours ago",
+      "Size": "4.1kB (virtual 85.9MB)",
+      "State": "exited",
+      "Status": "Exited (0) About a minute ago"
+    },
+    {
+      "Command": "\"/bin/prometheus --c\u2026\"",
+      "CreatedAt": "2026-10-20 15:19:22 +0300 MSK",
+      "HealthStatus": "none",
+      "ID": "b9dcdb0605e1",
+      "Image": "prom/prometheus:v3.5.0",
+      "Labels": "com.docker.compose.config-hash=452419b781f48304027ab88898543cf20d45d126626fd34264d0f305f7eb7049,com.docker.compose.container-number=1,com.docker.compose.depends_on=,com.docker.compose.image=sha256:8672a850efe2f9874702406c8318704edb363587f8c2ca88586b4c8fdb5cea24,com.docker.compose.oneoff=False,com.docker.compose.project.config_files=C:\\Users\\PZVLTZHT\\Desktop\\\u041a\u0443\u0440\u0441\\\u0417\u0430\u0434\u0430\u043d\u0438\u044f\\\u0420\u0435\u0448\u0435\u043d\u0438\u044f\\\u041f\u0440\u043e\u0435\u043a\u0442\\data\\final-20261020\\compose.json,com.docker.compose.project.working_dir=C:\\Users\\PZVLTZHT\\Desktop\\\u041a\u0443\u0440\u0441\\\u0417\u0430\u0434\u0430\u043d\u0438\u044f\\\u0420\u0435\u0448\u0435\u043d\u0438\u044f\\\u041f\u0440\u043e\u0435\u043a\u0442\\data\\final-20261020,com.docker.compose.project=course-final-20261020,com.docker.compose.service=prometheus,com.docker.compose.version=5.6.0,desktop.docker.io/binds/0/Source=C:\\Users\\PZVLTZHT\\Desktop\\\u041a\u0443\u0440\u0441\\\u0417\u0430\u0434\u0430\u043d\u0438\u044f\\\u0420\u0435\u0448\u0435\u043d\u0438\u044f\\\u041f\u0440\u043e\u0435\u043a\u0442\\infra\\prometheus.gpu.yml,desktop.docker.io/binds/0/SourceKind=hostFile,desktop.docker.io/binds/0/Target=/etc/prometheus/prometheus.yml,desktop.docker.io/binds/1/Source=C:\\Users\\PZVLTZHT\\Desktop\\\u041a\u0443\u0440\u0441\\\u0417\u0430\u0434\u0430\u043d\u0438\u044f\\\u0420\u0435\u0448\u0435\u043d\u0438\u044f\\\u041f\u0440\u043e\u0435\u043a\u0442\\infra\\alerts.yml,desktop.docker.io/binds/1/SourceKind=hostFile,desktop.docker.io/binds/1/Target=/etc/prometheus/alerts.yml,desktop.docker.io/ports.scheme=v2,maintainer=The Prometheus Authors <prometheus-developers@googlegroups.com>,org.opencontainers.image.source=https://github.com/prometheus/prometheus",
+      "LocalVolumes": "1",
+      "Mounts": "38e91c77bae6e2\u2026,/run/desktop/m\u2026,/run/desktop/m\u2026",
+      "Names": "course-final-20261020-prometheus-1",
+      "Networks": "course-final-20261020_internal",
+      "Platform": {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      "Ports": "",
+      "RunningFor": "4 hours ago",
+      "Size": "16.4kB (virtual 316MB)",
+      "State": "exited",
+      "Status": "Exited (0) About a minute ago"
+    },
+    {
+      "Command": "\"/run.sh\"",
+      "CreatedAt": "2026-10-20 15:19:22 +0300 MSK",
+      "HealthStatus": "none",
+      "ID": "ba66bcb51f7d",
+      "Image": "grafana/grafana:12.1.1",
+      "Labels": "com.docker.compose.config-hash=e651258be6f3933286b8258d36f4f6b1fcdc60e1e4ae0145c2a2f5898924b9e8,com.docker.compose.container-number=1,com.docker.compose.depends_on=,com.docker.compose.image=sha256:5749a0e982878aedaa2d320ed14d3bdce7a040a938f482258670009d419a597f,com.docker.compose.oneoff=False,com.docker.compose.project.config_files=C:\\Users\\PZVLTZHT\\Desktop\\\u041a\u0443\u0440\u0441\\\u0417\u0430\u0434\u0430\u043d\u0438\u044f\\\u0420\u0435\u0448\u0435\u043d\u0438\u044f\\\u041f\u0440\u043e\u0435\u043a\u0442\\data\\final-20261020\\compose.json,com.docker.compose.project.working_dir=C:\\Users\\PZVLTZHT\\Desktop\\\u041a\u0443\u0440\u0441\\\u0417\u0430\u0434\u0430\u043d\u0438\u044f\\\u0420\u0435\u0448\u0435\u043d\u0438\u044f\\\u041f\u0440\u043e\u0435\u043a\u0442\\data\\final-20261020,com.docker.compose.project=course-final-20261020,com.docker.compose.service=grafana,com.docker.compose.version=5.6.0,desktop.docker.io/binds/0/Source=C:\\Users\\PZVLTZHT\\Desktop\\\u041a\u0443\u0440\u0441\\\u0417\u0430\u0434\u0430\u043d\u0438\u044f\\\u0420\u0435\u0448\u0435\u043d\u0438\u044f\\\u041f\u0440\u043e\u0435\u043a\u0442\\infra\\grafana,desktop.docker.io/binds/0/SourceKind=hostFile,desktop.docker.io/binds/0/Target=/etc/grafana/provisioning,desktop.docker.io/ports.scheme=v2,maintainer=Grafana Labs <hello@grafana.com>,org.opencontainers.image.source=https://github.com/grafana/grafana",
+      "LocalVolumes": "0",
+      "Mounts": "/run/desktop/m\u2026",
+      "Names": "course-final-20261020-grafana-1",
+      "Networks": "course-final-20261020_internal",
+      "Platform": {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      "Ports": "",
+      "RunningFor": "4 hours ago",
+      "Size": "1.2MB (virtual 761MB)",
+      "State": "exited",
+      "Status": "Exited (0) About a minute ago"
+    },
+    {
+      "Command": "\"./entrypoint.sh\"",
+      "CreatedAt": "2026-10-20 15:19:22 +0300 MSK",
+      "HealthStatus": "none",
+      "ID": "463ed9d05920",
+      "Image": "qdrant/qdrant:v1.19.1",
+      "Labels": "com.docker.compose.config-hash=92b04be398c2c1ba4dd6053e338b2c2ea0ddac6d735eee7f2b01254288e07623,com.docker.compose.container-number=1,com.docker.compose.depends_on=,com.docker.compose.image=sha256:0699e7733a6fa7fa7f6b95dcbed84ebb04584110da525cdfdef9f305c4f57738,com.docker.compose.oneoff=False,com.docker.compose.project.config_files=C:\\Users\\PZVLTZHT\\Desktop\\\u041a\u0443\u0440\u0441\\\u0417\u0430\u0434\u0430\u043d\u0438\u044f\\\u0420\u0435\u0448\u0435\u043d\u0438\u044f\\\u041f\u0440\u043e\u0435\u043a\u0442\\data\\final-20261020\\compose.json,com.docker.compose.project.working_dir=C:\\Users\\PZVLTZHT\\Desktop\\\u041a\u0443\u0440\u0441\\\u0417\u0430\u0434\u0430\u043d\u0438\u044f\\\u0420\u0435\u0448\u0435\u043d\u0438\u044f\\\u041f\u0440\u043e\u0435\u043a\u0442\\data\\final-20261020,com.docker.compose.project=course-final-20261020,com.docker.compose.service=qdrant,com.docker.compose.version=5.6.0,desktop.docker.io/ports.scheme=v2,org.opencontainers.image.description=Official Qdrant image,org.opencontainers.image.documentation=https://qdrant.com/docs,org.opencontainers.image.source=https://github.com/qdrant/qdrant,org.opencontainers.image.title=Qdrant,org.opencontainers.image.url=https://qdrant.com/,org.opencontainers.image.vendor=Qdrant,org.opencontainers.image.version=v1.19.1",
+      "LocalVolumes": "1",
+      "Mounts": "course-final-2\u2026",
+      "Names": "course-final-20261020-qdrant-1",
+      "Networks": "course-final-20261020_internal",
+      "Platform": {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      "Ports": "",
+      "RunningFor": "4 hours ago",
+      "Size": "24.6kB (virtual 209MB)",
+      "State": "exited",
+      "Status": "Exited (143) About a minute ago"
+    },
+    {
+      "Command": "\"/bin/bash -c 'expor\u2026\"",
+      "CreatedAt": "2026-10-20 15:19:22 +0300 MSK",
+      "HealthStatus": "none",
+      "ID": "184daf36c622",
+      "Image": "neo4j:5.26-community",
+      "Labels": "com.docker.compose.config-hash=6d6ce297d537d639f98da6756a15bc739b61731676633d9cfaa9e11e4372abb7,com.docker.compose.container-number=1,com.docker.compose.depends_on=,com.docker.compose.image=sha256:a8ada2a9c5e78e6d767702b25c65d3c6e2313b618d42318cd9208c578742af51,com.docker.compose.oneoff=False,com.docker.compose.project.config_files=C:\\Users\\PZVLTZHT\\Desktop\\\u041a\u0443\u0440\u0441\\\u0417\u0430\u0434\u0430\u043d\u0438\u044f\\\u0420\u0435\u0448\u0435\u043d\u0438\u044f\\\u041f\u0440\u043e\u0435\u043a\u0442\\data\\final-20261020\\compose.json,com.docker.compose.project.working_dir=C:\\Users\\PZVLTZHT\\Desktop\\\u041a\u0443\u0440\u0441\\\u0417\u0430\u0434\u0430\u043d\u0438\u044f\\\u0420\u0435\u0448\u0435\u043d\u0438\u044f\\\u041f\u0440\u043e\u0435\u043a\u0442\\data\\final-20261020,com.docker.compose.project=course-final-20261020,com.docker.compose.service=neo4j,com.docker.compose.version=5.6.0,desktop.docker.io/binds/1/Source=C:/Users/PZVLTZHT/Desktop/\u041a\u0443\u0440\u0441/\u0417\u0430\u0434\u0430\u043d\u0438\u044f/\u0420\u0435\u0448\u0435\u043d\u0438\u044f/\u041f\u0440\u043e\u0435\u043a\u0442/data/final-20261020/runtime/neo4j-password.txt,desktop.docker.io/binds/1/SourceKind=hostFile,desktop.docker.io/binds/1/Target=/run/secrets/neo4j-password,desktop.docker.io/ports.scheme=v2",
+      "LocalVolumes": "2",
+      "Mounts": "course-final-2\u2026,e8803d961fa098\u2026,/run/desktop/m\u2026",
+      "Names": "course-final-20261020-neo4j-1",
+      "Networks": "course-final-20261020_internal",
+      "Platform": {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      "Ports": "",
+      "RunningFor": "4 hours ago",
+      "Size": "178MB (virtual 804MB)",
+      "State": "exited",
+      "Status": "Exited (137) About a minute ago"
+    }
+  ],
+  "retained_volumes": [
+    "course-final-20261020_neo4j",
+    "course-final-20261020_qdrant"
+  ],
+  "runtime_data_retained": true,
+  "source_archive_retained": true
+}

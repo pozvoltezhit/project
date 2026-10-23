@@ -1,0 +1,61 @@
+{
+  "timestamp": 1792497315.9681962,
+  "status": "PASS",
+  "files": [
+    {
+      "name": "LICENSE",
+      "size_match": true,
+      "sha256_match": true
+    },
+    {
+      "name": "README.md",
+      "size_match": true,
+      "sha256_match": true
+    },
+    {
+      "name": "config.json",
+      "size_match": true,
+      "sha256_match": true
+    },
+    {
+      "name": "generation_config.json",
+      "size_match": true,
+      "sha256_match": true
+    },
+    {
+      "name": "merges.txt",
+      "size_match": true,
+      "sha256_match": true
+    },
+    {
+      "name": "model-00001-of-00002.safetensors",
+      "size_match": true,
+      "sha256_match": true
+    },
+    {
+      "name": "model-00002-of-00002.safetensors",
+      "size_match": true,
+      "sha256_match": true
+    },
+    {
+      "name": "model.safetensors.index.json",
+      "size_match": true,
+      "sha256_match": true
+    },
+    {
+      "name": "tokenizer.json",
+      "size_match": true,
+      "sha256_match": true
+    },
+    {
+      "name": "tokenizer_config.json",
+      "size_match": true,
+      "sha256_match": true
+    },
+    {
+      "name": "vocab.json",
+      "size_match": true,
+      "sha256_match": true
+    }
+  ]
+}

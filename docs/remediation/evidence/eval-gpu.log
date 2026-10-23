@@ -1,0 +1,1 @@
+{"expected": 23, "completed": 23, "coverage": 1.0, "invalid": 0, "failures": 0, "gate": {"decision": "GO", "scope": "synthetic_mvp_only", "reasons": [], "production_approval": false, "threshold_status": "provisional"}}
