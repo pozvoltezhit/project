@@ -1,7 +1,0 @@
-{
-  "status": "PASS",
-  "method": "offline prepared-runtime rebase",
-  "image_id": "sha256:6ee26fe97239ead672a5fabb03b995d6e22584485dfa96cf5b36862a00274e1e",
-  "dependency_versions": "Verified against full lock during build",
-  "limitation": "Prepared OS/OCR runtime required; fresh offline apt build not confirmed"
-}

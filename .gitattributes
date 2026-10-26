@@ -1,4 +1,4 @@
-# Preserve exact bytes of the tested sources and historical evidence.
+# Preserve exact bytes of the source and document files.
 # -text disables line-ending conversion without disabling text diffs.
 * -text
 *.pdf binary

@@ -15,7 +15,7 @@ from backend.bundle import identity
 
 def main():
     parser=argparse.ArgumentParser()
-    parser.add_argument('--output',type=Path,default=Path('docs/remediation/evidence/verification.json'))
+    parser.add_argument('--output',type=Path,default=Path('data/verification/verification.json'))
     args=parser.parse_args()
     args.output.parent.mkdir(parents=True,exist_ok=True)
     evidence=args.output.parent

@@ -1,7 +1,0 @@
-{
-  "dataset_sha256": "3bb9bba35a49a337c5f48efcd27ceae5e0700ddbed38cdcf55e9ba98a0e8fc95",
-  "cases": 20,
-  "timestamp": 1792504962.355903,
-  "query_overlap_with_golden": 0,
-  "policy": "Frozen once, evaluate only after prompt candidate is selected; no expected answer edits"
-}

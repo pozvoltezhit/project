@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=course-knowledge-audit:20261020
+ARG BASE_IMAGE=knowledge:local
 FROM ${BASE_IMAGE}
 USER root
 COPY requirements-dev.txt /tmp/requirements-dev.txt

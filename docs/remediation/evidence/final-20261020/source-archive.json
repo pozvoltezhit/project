@@ -1,7 +1,0 @@
-{
-  "path": "data/final-20261020/source-bundle.zip",
-  "sha256": "8823c363aea8fd67ec4aa6819673950ab4b986345c3d8140840ac5c9d605af63",
-  "size": 168615,
-  "inventory_sha256": "63febfff393c65472abf20cd2bbf41286ddb3ed43de9b63f459366b1f1b99aab",
-  "scope": "Reproducible source/config/test fixtures; documentation/video/evidence delivered separately"
-}

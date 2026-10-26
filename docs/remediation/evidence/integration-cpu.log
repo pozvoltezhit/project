@@ -1,1 +1,0 @@
-PASS: HTTP RBAC/tenant/session/injection, scanned PDF OCR, Qdrant ACL, Neo4j mirror, Jaeger spans, Prometheus, blocked backend egress

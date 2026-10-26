@@ -11,17 +11,13 @@ jobs:
         run: docker build -f infra/Dockerfile.test --build-arg BASE_IMAGE=knowledge:candidate -t knowledge:tools .
       - name: Verify CPU and security with isolated SQL
         run: |
-          mkdir -p docs/remediation/evidence/ci
-          docker run --rm --network none --entrypoint python knowledge:candidate -c 'import json; from backend.bundle import identity; print(json.dumps(identity()))' > docs/remediation/evidence/ci/image-bundle.json
-          docker run --rm --network none --user "$(id -u):$(id -g)" -v "$PWD:/app:ro" -v "$PWD/docs/remediation/evidence/ci:/evidence" --entrypoint python knowledge:tools -c 'import json; from backend.bundle import identity; assert identity() == json.load(open("/evidence/image-bundle.json")), "Checkout differs from built runtime"'
-          docker run --rm --network none --user "$(id -u):$(id -g)" -v "$PWD:/app:ro" -v "$PWD/docs/remediation/evidence/ci:/evidence" -e DB_PATH=/tmp/ci.db -e AUTH_FILE=/tmp/absent.json -e PYTHONDONTWRITEBYTECODE=1 -e MYPY_CACHE_DIR=/tmp/mypy -e RUFF_CACHE_DIR=/tmp/ruff -e COVERAGE_FILE=/tmp/.coverage --entrypoint python knowledge:tools tools/verify.py --output /evidence/verification.json
-          docker run --rm --network none --user "$(id -u):$(id -g)" -v "$PWD/docs/remediation/evidence/ci:/evidence" -e DB_PATH=/tmp/eval.db -e PYTHONDONTWRITEBYTECODE=1 --entrypoint python knowledge:candidate -m backend.evaluate --output /evidence/eval-cpu.json
+          mkdir -p data/ci
+          docker run --rm --network none --entrypoint python knowledge:candidate -c 'import json; from backend.bundle import identity; print(json.dumps(identity()))' > data/ci/image-bundle.json
+          docker run --rm --network none --user "$(id -u):$(id -g)" -v "$PWD:/app:ro" -v "$PWD/data/ci:/evidence" --entrypoint python knowledge:tools -c 'import json; from backend.bundle import identity; assert identity() == json.load(open("/evidence/image-bundle.json")), "Checkout differs from built runtime"'
+          docker run --rm --network none --user "$(id -u):$(id -g)" -v "$PWD:/app:ro" -v "$PWD/data/ci:/evidence" -e DB_PATH=/tmp/ci.db -e AUTH_FILE=/tmp/absent.json -e PYTHONDONTWRITEBYTECODE=1 -e MYPY_CACHE_DIR=/tmp/mypy -e RUFF_CACHE_DIR=/tmp/ruff -e COVERAGE_FILE=/tmp/.coverage --entrypoint python knowledge:tools tools/verify.py --output /evidence/verification.json
+          docker run --rm --network none --user "$(id -u):$(id -g)" -v "$PWD/data/ci:/evidence" -e DB_PATH=/tmp/eval.db -e PYTHONDONTWRITEBYTECODE=1 --entrypoint python knowledge:candidate -m backend.evaluate --output /evidence/eval-cpu.json
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: cpu-verification
-          path: docs/remediation/evidence/ci/
-      - name: Record unexecuted GPU/deployment stage
-        run: |
-          echo 'GPU integration/evaluation/smoke PENDING: this runner has no approved GPU/data-plane test environment.'
-          echo 'Release remains HOLD until matching real CPU/GPU integration and image evidence are supplied.'
+          path: data/ci/
